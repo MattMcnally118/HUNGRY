@@ -1,0 +1,25 @@
+<%= simple_form_for @question do |f| %>
+  <div>
+    <%= f.input :budget, as: :integer %>
+  </div>
+
+  <div>
+    <%= f.input :number_of_people, as: :integer %>
+  </div>
+
+  <div>
+    <%= f.input :current_mood %>
+  </div>
+
+  <div>
+    <%= f.input :dietary_restrictions, as: :text %>
+  </div>
+
+  <div>
+    <%= f.input :cuisine_type %>
+  </div>
+
+  <div>
+    <%= f.button :submit, "Submit" %>
+  </div>
+<% end %>
