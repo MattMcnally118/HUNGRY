@@ -5,6 +5,13 @@ class Question < ApplicationRecord
 
   before_save :preferences
 
+  # client = OpenAI::Client.new
+  # chatgpt_response = client.chat(parameters: {
+  #   model: "gpt-4o-mini",
+  #   input: [{ role: "user", content: "Reccomend one restaurant from #{@restaurants.all} that suits the responses best from #{@question.preferences}. Return only the instance of the restaurant model chosen'."}]
+  # })
+  # @content = chatgpt_response["choices"][0]["message"]["content"]
+
   private
 
   def preferences
