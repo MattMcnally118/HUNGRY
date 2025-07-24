@@ -1,28 +1,39 @@
+<%= simple_form_for @question do |f| %>
+  <div>
+    <%= f.input :price_range,
+            as: :select,
+            collection: ['$', '$$', '$$$', '$$$$', '$$$$$'],
+            prompt: 'Select your budget',
+            label: 'What’s your budget?' %>
+  </div>
 
-  <%= simple_form_for @question, html: { class: 'needs-validation', novalidate: true } do |f| %>
-  <div class="container">
-  <div class="row">
-    <div class="w-50 mx-auto">
-      <%= simple_form_for @question, html: { class: 'needs-validation', novalidate: true } do |f| %>
-        <div class="mb-3">
-          <%= f.input :budget, as: :integer, label: 'Budget', input_html: { class: 'form-control', placeholder: 'Enter budget' } %>
-        </div>
+  <div>
+    <%= f.input :number_of_people,
+            as: :integer,
+            input_html: { placeholder: 'Enter number of diners' },
+            label: 'How many people are you eating with?' %>
+  </div>
 
-        <div class="mb-3">
-          <%= f.input :number_of_people, as: :integer, label: 'Number of People', input_html: { class: 'form-control', placeholder: 'Enter number of people' } %>
-        </div>
+  <div>
+    <%= f.input :current_mood,
+            as: :string,
+            input_html: { placeholder: 'e.g. Casual, Romantic, Family-Friendly, Trendy' },
+            hint: "Describe the vibe you’re going for. One word is enough.",
+            label: "What’s the mood of the restaurant you're looking for?" %>
+  </div>
 
-        <div class="mb-3">
-          <%= f.input :current_mood, label: 'Current Mood', input_html: { class: 'form-control', placeholder: 'Describe mood' } %>
-        </div>
+  <%= f.input :dietary_restrictions,
+            as: :radio_buttons,
+            collection: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Pescatarian', 'None'],
+            label: 'Do you have any dietary restrictions?',
+            item_wrapper_tag: :div %>
 
-        <div class="mb-3">
-          <%= f.input :dietary_restrictions, as: :text, label: 'Dietary Restrictions', input_html: { class: 'form-control', placeholder: 'List any dietary restrictions', rows: 3 } %>
-        </div>
+  <div>
+    <%= f.input :cuisine_type,
+            input_html: { placeholder: 'e.g. Japanese, Contemporary, African, Fine-Dining' },
+            label: 'What kind of cuisine are you craving?' %>
+  </div>
 
-        <div class="mb-3">
-          <%= f.input :cuisine_type, label: 'Cuisine Type', input_html: { class: 'form-control', placeholder: 'Preferred cuisine type' } %>
-        </div>
 
         <div class="mb-3 text-center">
           <%= f.button :submit, "Submit", class: 'btn btn-primary' %>

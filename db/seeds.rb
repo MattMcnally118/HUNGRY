@@ -90,7 +90,7 @@ Restaurant.create!(
 Restaurant.create!(
   user: user,
   name: "Die Strandloper",
-  location: "West Coast Road (R27), Langebaan",
+  location: "jan olfsen str, Leentjiesklip, Langebaan, 7357",
   cuisine_type: "Seafood, Traditional South African",
   price_range: "$$$",
   description: "Laid-back beach braai experience in Langebaan with multi-course seafood cooked over fire.",
@@ -186,7 +186,7 @@ Restaurant.create!(
 Restaurant.create!(
   user: user,
   name: "Boschendal",
-  location: "Boschendal Wine Estate, between Franschhoek & Stellenbosch",
+  location: "Boschendal Estate, Pniel Road, Groot, Franschhoek, 7690",
   cuisine_type: "Farm-to-Table, South African",
   price_range: "$$$",
   description: "Historic wine estate with seasonal menus, open-fire cooking, and a farm-to-table ethos.",
@@ -210,7 +210,7 @@ Restaurant.create!(
 Restaurant.create!(
   user: user,
   name: "Delaire Graff",
-  location: "Off Helshoogte Pass, Stellenbosch",
+  location: "Helshoogte Rd, Stellenbosch, 7602",
   cuisine_type: "Fine Dining, Contemporary",
   price_range: "$$$$",
   description: "Luxury wine estate offering world-class cuisine and panoramic vineyard views.",
@@ -246,7 +246,7 @@ Restaurant.create!(
 Restaurant.create!(
   user: user,
   name: "Fairview Wine and Cheese",
-  location: "Fairview Wine and Cheese, Paarl",
+  location: "Suid-Agter-Paarl Rd, Suider, Paarl, 7646",
   cuisine_type: "Wine Tasting, Cheese, Mediterranean",
   price_range: "$$",
   description: "Paarl-based farm featuring artisanal cheese, wine tastings, and farm-fresh dining.",
@@ -654,7 +654,7 @@ Restaurant.create!(
 Restaurant.create!(
   user: user,
   name: "Scala Pasta Bar",
-  location: "81 Church Street, Cape Town City Centre, 8001",
+  location: "81 Church St, Cape Town City Centre, Cape Town, 8000",
   cuisine_type: "Italian",
   price_range: "$$",
   description: "Rustic Italian pasta bar offering handmade fresh pasta dishes in a cozy downtown spot.",
@@ -853,392 +853,4 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Hip, Urban, Eclectic",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
-)
-Restaurant.create!(
-  user: user,
-  name: "Cattle Baron",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Chef's Warehouse & Canteen",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Chef's Warehouse Beau Constantia",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Chorus",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Coy",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Dusk",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "FYN",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Grub & Vine",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Harbour House",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Hoseki",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Hussar Grill",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Jan Franschhoek",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "La Colombe",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "La Petite Colombe",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Mertia",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Newport Market & Deli",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Ongetem",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Ouzeri",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Pier",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Rust en Vrede",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Salon",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "Salsify at The Roundhouse",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "The Butcher Shop & Grill",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "The Foodbarn",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "The Happy Uncles",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "The Pot Luck Club",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "The Red Room",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "The Table at De Meye",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "The Table at Oak Valley",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
-)
-
-
-Restaurant.create!(
-  user: user,
-  name: "The Test Kitchen",
-  location: "TBD",
-  cuisine_type: "Various",
-  price_range: "$$",
-  description: "Description to be added.",
-  number_of_people: 4,
-  mood: "Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free"]
 )
