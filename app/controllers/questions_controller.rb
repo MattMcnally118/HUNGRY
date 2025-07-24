@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: %w[show destroy]
+  before_action :set_question, only: %w[show destroy save_booking]
 
   def index
     @questions = Question.all
@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
 
       @question.update!(
         ai_reasoning: ai_response,
-        recommended_restaurant_id: recommended_restaurant
+        recommended_restaurant_id: recommended_restaurant&.id
       )
 
       redirect_to @question, notice: 'Recommendation Ready.'
@@ -34,6 +34,15 @@ class QuestionsController < ApplicationController
   def destroy
     @question.destroy
     redirect_to questions_url, notice: 'Question was successfully destroyed.'
+  end
+
+  def save_booking
+    Booking.create!(
+      user: current_user,
+      restaurant: @question.restaurant
+    )
+
+    redirect_to restaurant_path(@question.restaurant), notice: "Booking saved!"
   end
 
   private
@@ -94,8 +103,12 @@ class QuestionsController < ApplicationController
   end
 
   def find_restaurant_from_response(response)
-    name = response.match(/Restaurant Name: (.+)/i)&.captures&.first
+    name = response.match(/Restaurant Name: (.+?)\s+[–-]/)&.captures&.first
+    puts "Matched restaurant name from GPT: #{name}"
+
     name ||= Restaurant.all.find { |r| response.include?(r.name) }&.name
+    puts "Fallback match found: #{name}" if name.nil?
+
     Restaurant.find_by(name: name)
   end
 end
