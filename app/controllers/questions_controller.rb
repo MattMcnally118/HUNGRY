@@ -14,8 +14,18 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
+    @question.user = current_user
+
     if @question.save
-      redirect_to @question, notice: 'Question was successfully created.'
+      ai_response = get_ai_recommendation(@question)
+      recommended_restaurant = find_restaurant_from_response(ai_response)
+
+      @question.update!(
+        ai_reasoning: ai_response,
+        recommended_restaurant_id: recommended_restaurant
+      )
+
+      redirect_to @question, notice: 'Recommendation Ready.'
     else
       render :new
     end
@@ -34,14 +44,58 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(
-      :budget,
+      :price_range,
       :number_of_people,
       :current_mood,
       :dietary_restrictions,
-      :cuisine_type,
-      :ai_reasoning,
-      :user_id,
-      :recommended_restaurant_id
+      :cuisine_type
     )
+  end
+
+  def get_ai_recommendation(question)
+    client = OpenAI::Client.new
+    restaurants = Restaurant.all.map do |r|
+      {
+        name: r.name,
+        cuisine_type: r.cuisine_type,
+        price_range: r.price_range,
+        mood: r.mood,
+        dietary_restrictions: r.dietary_restrictions
+      }
+    end
+    prompt = <<~PROMPT
+      Based only on this list of restaurants: #{restaurants.to_json},
+      and the user's preferences: #{question.preference_data.to_json},
+      recommend the one restaurant from the list that best matches the user.
+      Only choose from the list — do not make up a restaurant.
+      Format your response like this:
+
+      Respond in this exact format:
+      Restaurant Name: [Name] – [Reason why it was chosen]
+
+      Example:
+      Restaurant Name: El Burro – because it fits the user's casual mood and offers vegetarian options.
+
+      Now choose just one.
+    PROMPT
+
+    puts "\n========= GPT PROMPT ========="
+    puts prompt
+    puts "==============================\n"
+
+    response = client.chat(
+      parameters: {
+        model: "gpt-4o",
+        messages: [{ role: "user", content: prompt }],
+        temperature: 0.7
+      }
+    )
+    response.dig("choices", 0, "message", "content")
+  end
+
+  def find_restaurant_from_response(response)
+    name = response.match(/Restaurant Name: (.+)/i)&.captures&.first
+    name ||= Restaurant.all.find { |r| response.include?(r.name) }&.name
+    Restaurant.find_by(name: name)
   end
 end
