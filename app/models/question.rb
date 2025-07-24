@@ -1,6 +1,6 @@
 class Question < ApplicationRecord
   belongs_to :user
-  belongs_to :restaurant, foreign_key: :recommended_restaurant_id, optional: true
+  belongs_to :restaurant, class_name: "Restaurant", foreign_key: :recommended_restaurant_id, optional: true
   attr_accessor :price_range, :number_of_people, :current_mood, :dietary_restrictions, :cuisine_type
 
   before_validation :preferences

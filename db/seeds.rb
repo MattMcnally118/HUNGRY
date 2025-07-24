@@ -1,6 +1,4 @@
 # Clear existing data in correct order
-DishesReview.delete_all
-Dish.delete_all
 Question.delete_all
 Restaurant.delete_all
 User.delete_all
@@ -8,15 +6,14 @@ User.delete_all
 # Reset primary key sequences
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('restaurants')
-ActiveRecord::Base.connection.reset_pk_sequence!('dishes')
+
 
 # Create test user
 
-user = User.create!(email: "test@example.com", password: "password123")
+User.create!(email: "test@example.com", password: "password123")
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 
 Restaurant.create!(
-  user: user,
   name: "The Brass Bell",
   location: "75 Main Rd, Kalk Bay, Cape Town, 7975",
   cuisine_type: "Seafood, Pub",
@@ -28,7 +25,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Ocean Basket",
   location: "Shop 17, Piazza St. John’s, Main Rd, Sea Point, Cape Town",
   cuisine_type: "Seafood, Family Dining",
@@ -40,7 +36,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Codfather",
   location: "37 The Drive, Camps Bay, Cape Town, 8040",
   cuisine_type: "Seafood, Sushi",
@@ -52,7 +47,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Willoughby & Co",
   location: "Shop 6132, 19 Dock Road (Ground Level), Victoria Wharf, V&A Waterfront, Cape Town, 8002",
   cuisine_type: "Japanese, Seafood",
@@ -64,7 +58,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Aubergine Restaurant",
   location: "39 Barnet Street, Gardens, Cape Town, 8001",
   cuisine_type: "Fine Dining, European Fusion",
@@ -76,7 +69,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Lebanese Bakery Cape Town",
   location: "7 Constitution St, Cape Town, 8001",
   cuisine_type: "Lebanese, Bakery",
@@ -88,7 +80,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Die Strandloper",
   location: "jan olfsen str, Leentjiesklip, Langebaan, 7357",
   cuisine_type: "Seafood, Traditional South African",
@@ -100,7 +91,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Roundhouse Restaurant",
   location: "The Roundhouse, Roundhouse Rd, Camps Bay, Cape Town, 8005",
   cuisine_type: "Fine Dining, Modern European",
@@ -112,7 +102,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Azure Restaurant",
   location: "The Twelve Apostles Hotel, Victoria Road, Camps Bay, Cape Town, 8005",
   cuisine_type: "Seafood, Contemporary South African",
@@ -124,7 +113,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Nobu",
   location: "Dock Road, One&Only Cape Town, V&A Waterfront, Cape Town, 8001",
   cuisine_type: "Japanese-Peruvian, Fine Dining",
@@ -136,7 +124,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Kyoto Garden Sushi",
   location: "11 Kloof Nek Road, Tamboerskloof, Cape Town, 8001",
   cuisine_type: "Japanese, Sushi",
@@ -148,7 +135,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Simply Asia",
   location: "Food court, Victoria Wharf, V&A Waterfront, Cape Town, 8001",
   cuisine_type: "Thai, Asian Fusion",
@@ -160,7 +146,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Col'Cacchio",
   location: "Food court, Victoria Wharf, V&A Waterfront, Cape Town, 8001",
   cuisine_type: "Italian, Pizza",
@@ -172,7 +157,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Tiger's Milk",
   location: "44 Long Street, Cape Town, 8000",
   cuisine_type: "Burgers, Pizza, Bar",
@@ -184,7 +168,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Boschendal",
   location: "Boschendal Estate, Pniel Road, Groot, Franschhoek, 7690",
   cuisine_type: "Farm-to-Table, South African",
@@ -196,7 +179,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Babylonstoren",
   location: "Babylonstoren Road, Franschhoek, 7690",
   cuisine_type: "Farm-to-Table, Contemporary",
@@ -208,7 +190,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Delaire Graff",
   location: "Helshoogte Rd, Stellenbosch, 7602",
   cuisine_type: "Fine Dining, Contemporary",
@@ -220,7 +201,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Klein Constantia",
   location: "37 Klein Constantia Road, Constantia, Cape Town, 7806",
   cuisine_type: "Winery, South African Tasting",
@@ -232,7 +212,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Groot Constantia",
   location: "Groot Constantia Wine Estate, Groot Constantia Road, Constantia, 7806",
   cuisine_type: "South African, Heritage",
@@ -244,7 +223,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Fairview Wine and Cheese",
   location: "Suid-Agter-Paarl Rd, Suider, Paarl, 7646",
   cuisine_type: "Wine Tasting, Cheese, Mediterranean",
@@ -256,7 +234,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "HQ Restaurant",
   location: "100 Shortmarket Street, Cape Town Central, 8001",
   cuisine_type: "Steakhouse, Contemporary",
@@ -268,7 +245,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Societi Bistro",
   location: "50 Orange Street, Gardens, Cape Town, 8001",
   cuisine_type: "Bistro, European",
@@ -280,7 +256,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Dear Me",
   location: "165 Longmarket Street, Cape Town Central, 8000",
   cuisine_type: "Healthy, Contemporary",
@@ -292,7 +267,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Fork Restaurant",
   location: "84 Long Street, Cape Town, 8000",
   cuisine_type: "Tapas, Contemporary",
@@ -304,7 +278,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Miller's Thumb",
   location: "10B Kloof Nek Road, Tamboerskloof, Cape Town, 8001",
   cuisine_type: "Seafood, Contemporary",
@@ -316,7 +289,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Kloof Street House",
   location: "30 Kloof Street, Gardens, Cape Town, 8001",
   cuisine_type: "Eclectic, Contemporary",
@@ -328,7 +300,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Neighbourgoods Market",
   location: "The Old Biscuit Mill, 373–375 Albert Road, Woodstock, Cape Town, 8010",
   cuisine_type: "Global Street Food, Market",
@@ -340,7 +311,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Truth Coffee",
   location: "36 Buitenkant Street, Cape Town Central, 8000",
   cuisine_type: "Café, Breakfast & Brunch",
@@ -352,7 +322,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Jason Bakery",
   location: "185 Bree Street, Cape Town Central, 8001",
   cuisine_type: "Bakery, Café",
@@ -364,7 +333,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "The Dog's Bollocks",
   location: "6 Roodehek Street, Gardens, Cape Town, 8001",
   cuisine_type: "Burgers, Comfort Food",
@@ -376,7 +344,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Upper Union",
   location: "3 Upper Union St, Gardens, Cape Town, 8001",
   cuisine_type: "Modern Global",
@@ -388,7 +355,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Tjing Tjing",
   location: "165 Longmarket Street, Cape Town Central, 8001",
   cuisine_type: "Japanese, Fusion",
@@ -400,7 +366,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Haiku",
   location: "58 Burg Street, Cape Town Central, 8000",
   cuisine_type: "Asian, Dim Sum, Sushi",
@@ -412,7 +377,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Vadivelu",
   location: "151 Kloof St, Gardens, Cape Town, 8001",
   cuisine_type: "Indian, South Indian",
@@ -424,7 +388,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Honest Chocolate Cafe",
   location: "64A Wale Street, Cape Town Central, 8001",
   cuisine_type: "Dessert, Café",
@@ -436,7 +399,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Africa Cafe",
   location: "108–110 Shortmarket Street, Heritage Square, Cape Town Central, 8001",
   cuisine_type: "African, Pan-African",
@@ -448,7 +410,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Gold Restaurant",
   location: "15 Bennett Street, De Waterkant/Green Point, Cape Town, 8001",
   cuisine_type: "African, Fine Dining",
@@ -460,7 +421,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Mama Africa",
   location: "178 Long Street, Cape Town Central, 8001",
   cuisine_type: "African, South African",
@@ -472,7 +432,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Moyo",
   location: "Kirstenbosch National Botanical Garden, Rhodes Drive, Newlands, Cape Town, 7700",
   cuisine_type: "African, Contemporary",
@@ -484,7 +443,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "The African Cafe",
   location: "108 Shortmarket Street, Cape Town Central, 8000",
   cuisine_type: "African, Traditional",
@@ -496,7 +454,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Ganesh",
   location: "38 Trill Rd, Observatory, Cape Town, 7925",
   cuisine_type: "Indian, Fusion",
@@ -508,7 +465,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "La Boheme",
   location: "341 Main Road, Sea Point, Cape Town, 8005",
   cuisine_type: "Bistro, Mediterranean",
@@ -520,7 +476,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Cafe Paradiso",
   location: "110 Kloof Street, Gardens, Cape Town, 8001",
   cuisine_type: "Italian, Mediterranean",
@@ -532,7 +487,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Greek Fisherman",
   location: "78 Regent Road, Sea Point, Cape Town, 8005",
   cuisine_type: "Greek, Seafood",
@@ -544,7 +498,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Mykonos",
   location: "343 Main Road, Sea Point, Cape Town, 8005",
   cuisine_type: "Greek, Mediterranean",
@@ -556,7 +509,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Shortmarket Club",
   location: "88 Shortmarket Street, Cape Town Central, 8001",
   cuisine_type: "Contemporary, Fine Dining",
@@ -568,7 +520,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Belly of the Beast",
   location: "110 Harrington St, Cape Town City Centre, Cape Town, 8000",
   cuisine_type: "Modern South African",
@@ -580,7 +531,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "The Restaurant at Newton Johnson",
   location: "R320 Hemel‑en‑Aarde Road, Upper Hemel‑en‑Aarde Valley, Hermanus, 7201",
   cuisine_type: "Modern South African, Fine Dining",
@@ -592,7 +542,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Carlyle's on Derry",
   location: "17 Derry Street, Vredehoek, Cape Town, 8001",
   cuisine_type: "Italian, Grill",
@@ -604,7 +553,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Eighty-Ate",
   location: "88 Queen Victoria Street, Gardens (Cape Town CBD), 8001",
   cuisine_type: "Global Contemporary",
@@ -616,7 +564,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "The Nelsons Eye",
   location: "31 Roodehek Street, Gardens, Cape Town, 8001",
   cuisine_type: "Steakhouse",
@@ -628,7 +575,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Our Local",
   location: "117 Kloof Street, Gardens, Cape Town, 8001",
   cuisine_type: "Café, Bistro",
@@ -640,7 +586,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Mantra Cafe",
   location: "43 Victoria Road, Camps Bay, Cape Town, 8040",
   cuisine_type: "Mediterranean, Contemporary",
@@ -652,7 +597,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Scala Pasta Bar",
   location: "81 Church St, Cape Town City Centre, Cape Town, 8000",
   cuisine_type: "Italian",
@@ -664,7 +608,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Brash Burgers",
   location: "90 Regent Road, Sea Point, Cape Town, 8005",
   cuisine_type: "American, Burgers",
@@ -676,7 +619,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Den Anker",
   location: "Pierhead, Victoria & Alfred Waterfront, Cape Town, 8001",
   cuisine_type: "Belgian, Seafood",
@@ -688,7 +630,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Quay Four",
   location: "Quay 4 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
   cuisine_type: "Seafood, Pub",
@@ -700,7 +641,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Baia Seafood Restaurant",
   location: "Shop 7226, Victoria Wharf, V&A Waterfront, Cape Town, 8001",
   cuisine_type: "Seafood, Fine Dining",
@@ -712,7 +652,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Ramenhead",
   location: "37 Parliament St, Cape Town City Centre, Cape Town, 8000",
   cuisine_type: "Japanese, Ramen",
@@ -724,7 +663,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Tomson",
   location: "120 Bree Street, Cape Town Central, 8001",
   cuisine_type: "Cantonese, Asian",
@@ -736,7 +674,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Blues Restaurant",
   location: "52 Victoria Road, Camps Bay, Cape Town, 8040",
   cuisine_type: "Seafood, Contemporary",
@@ -748,7 +685,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "La Med",
   location: "Glen Country Club, 3 Victoria Rd (near Clifton Beach), Cape Town, 8005",
   cuisine_type: "Mediterranean, Bar",
@@ -760,7 +696,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Zenzero",
   location: "Shop 2A, The Promenade, Victoria Road, Camps Bay, 8040",
   cuisine_type: "Italian, Seafood",
@@ -772,7 +707,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Nish Nush",
   location: "100 Bree St, Cape Town City Centre, Cape Town, 8000",
   cuisine_type: "Middle Eastern, Vegan",
@@ -784,7 +718,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Café Caprice",
   location: "37 Victoria Road, Camps Bay, Cape Town, 8040",
   cuisine_type: "Cafe, Cocktail Bar",
@@ -796,7 +729,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Kitima",
   location: "Kronendal Estate, 140 Main Road, Hout Bay, Cape Town, 7806",
   cuisine_type: "Asian, Thai, Fusion",
@@ -808,7 +740,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Wang Thai",
   location: "Lagoon Beach Hotel, 36 Lagoon Beach Drive, Milnerton, Cape Town, 7441",
   cuisine_type: "Thai",
@@ -820,7 +751,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "La Parada",
   location: "V&A Waterfront (Central Pier), Cape Town, 8001",
   cuisine_type: "Spanish, Tapas",
@@ -832,7 +762,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Pigalle",
   location: "57a Somerset Road, Green Point, Cape Town, 8060",
   cuisine_type: "Seafood, Steakhouse",
@@ -844,7 +773,6 @@ Restaurant.create!(
 )
 
 Restaurant.create!(
-  user: user,
   name: "Clarke's Bar & Dining Room",
   location: "33 Bree Street, Cape Town Central, 8001",
   cuisine_type: "American, Diner",
@@ -852,5 +780,334 @@ Restaurant.create!(
   description: "Trendy eatery serving all-day breakfasts, burgers, and cocktails with a downtown NYC vibe.",
   number_of_people: 2,
   mood: "Hip, Urban, Eclectic",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+Restaurant.create!(
+  name: "Cattle Baron",
+  location: "Shop 6, Victoria Wharf Shopping Centre, V&A Waterfront, Cape Town, 8001",
+  cuisine_type: "Steakhouse, Grill",
+  price_range: "$$$",
+  description: "Premium steakhouse chain known for aged beef, grills, and hearty South African portions.",
+  number_of_people: 4,
+  mood: "Traditional, Masculine, Hearty",
+  dietary_restrictions: ["Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Chef's Warehouse & Canteen",
+  location: "92 Bree Street, Cape Town Central, 8001",
+  cuisine_type: "Tapas, Modern European",
+  price_range: "$$$",
+  description: "No-reservations tapas bar known for creative small plates and natural wines in a bustling atmosphere.",
+  number_of_people: 2,
+  mood: "Bustling, Creative, Unpretentious",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Chef's Warehouse Beau Constantia",
+  location: "1 Beau Constantia Road, Constantia, Cape Town, 7806",
+  cuisine_type: "Contemporary, Wine Estate",
+  price_range: "$$$$",
+  description: "Elevated dining experience on a wine estate with panoramic mountain views and seasonal menus.",
+  number_of_people: 2,
+  mood: "Scenic, Refined, Wine-Focused",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Chorus",
+  location: "Silo District, Silo Square, V&A Waterfront, Cape Town, 8001",
+  cuisine_type: "Contemporary, International",
+  price_range: "$$$$",
+  description: "Sophisticated rooftop restaurant with harbor views offering contemporary cuisine and cocktails.",
+  number_of_people: 2,
+  mood: "Upscale, Rooftop, Panoramic",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Coy",
+  location: "52 Main Road, Kalk Bay, Cape Town, 7975",
+  cuisine_type: "Contemporary, Bistro",
+  price_range: "$$$",
+  description: "Intimate restaurant in a converted theatre space offering creative contemporary cuisine.",
+  number_of_people: 2,
+  mood: "Intimate, Creative, Theatrical",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Dusk",
+  location: "Silo District, Silo Square, V&A Waterfront, Cape Town, 8001",
+  cuisine_type: "Contemporary, Rooftop Bar",
+  price_range: "$$$",
+  description: "Chic rooftop bar and restaurant with 360-degree city views and craft cocktails.",
+  number_of_people: 4,
+  mood: "Trendy, Panoramic, Evening",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "FYN",
+  location: "37 Parliament Street, Cape Town Central, 8001",
+  cuisine_type: "Fine Dining, Japanese-South African Fusion",
+  price_range: "$$$$",
+  description: "World-class restaurant combining Japanese techniques with South African ingredients in innovative tasting menus.",
+  number_of_people: 2,
+  mood: "Sophisticated, Innovative, World-Class",
+  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Grub & Vine",
+  location: "95 Kloof Street, Gardens, Cape Town, 8001",
+  cuisine_type: "Wine Bar, Contemporary",
+  price_range: "$$$",
+  description: "Intimate wine bar serving seasonal small plates with an extensive natural wine selection.",
+  number_of_people: 2,
+  mood: "Intimate, Wine-Focused, Cozy",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Harbour House",
+  location: "Quay 4, V&A Waterfront, Cape Town, 8001",
+  cuisine_type: "Seafood, Contemporary",
+  price_range: "$$$",
+  description: "Waterfront seafood restaurant with harbor views specializing in fresh daily catches and ocean-to-table dining.",
+  number_of_people: 4,
+  mood: "Nautical, Fresh, Scenic",
+  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Hoseki",
+  location: "Helshoogte Road, Stellenbosch, 7600",
+  cuisine_type: "Japanese, Fine Dining",
+  price_range: "$$$$",
+  description: "Luxury Japanese restaurant on a wine estate offering authentic kaiseki cuisine with vineyard views.",
+  number_of_people: 2,
+  mood: "Luxurious, Authentic, Scenic",
+  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Hussar Grill",
+  location: "12 Beach Road, Mouille Point, Cape Town, 8001",
+  cuisine_type: "Steakhouse, Traditional",
+  price_range: "$$$",
+  description: "Historic Cape Town steakhouse institution known for prime cuts, classic sides, and old-world service.",
+  number_of_people: 2,
+  mood: "Classic, Traditional, Masculine",
+  dietary_restrictions: ["Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Jan Franschhoek",
+  location: "12 Huguenot Road, Franschhoek, 7690",
+  cuisine_type: "Contemporary, Fine Dining",
+  price_range: "$$$$",
+  description: "Award-winning restaurant offering refined contemporary cuisine celebrating South African ingredients.",
+  number_of_people: 2,
+  mood: "Refined, Contemporary, Award-Winning",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "La Colombe",
+  location: "Silvermist Wine Estate, Constantia Nek, Cape Town, 7806",
+  cuisine_type: "Fine Dining, Contemporary",
+  price_range: "$$$$",
+  description: "World-renowned restaurant in the Constantia mountains offering sophisticated cuisine with spectacular valley views.",
+  number_of_people: 2,
+  mood: "World-Class, Scenic, Romantic",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "La Petite Colombe",
+  location: "12 Huguenot Street, Franschhoek, 7690",
+  cuisine_type: "Fine Dining, Contemporary",
+  price_range: "$$$$",
+  description: "Sister restaurant to La Colombe offering exceptional fine dining in the heart of Franschhoek.",
+  number_of_people: 2,
+  mood: "Elegant, Franschhoek, Fine Dining",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Mertia",
+  location: "Roundhouse Road, Camps Bay, Cape Town, 8005",
+  cuisine_type: "Contemporary, Fine Dining",
+  price_range: "$$$$",
+  description: "Intimate fine dining restaurant in a historic setting offering innovative seasonal cuisine.",
+  number_of_people: 2,
+  mood: "Intimate, Historic, Innovative",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Newport Market & Deli",
+  location: "47 Beach Road, Mouille Point, Cape Town, 8001",
+  cuisine_type: "Deli, Market Cuisine",
+  price_range: "$$",
+  description: "Artisanal market and deli offering fresh produce, gourmet foods, and casual dining with ocean views.",
+  number_of_people: 4,
+  mood: "Fresh, Market-Style, Ocean Views",
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Ongetem",
+  location: "320 Hemel-en-Aarde Road, Hermanus, 7200",
+  cuisine_type: "Contemporary, Wine Estate",
+  price_range: "$$$",
+  description: "Farm-to-table restaurant on a boutique wine estate offering seasonal cuisine with Hemel-en-Aarde views.",
+  number_of_people: 2,
+  mood: "Rural, Farm-to-Table, Peaceful",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Ouzeri",
+  location: "106 Regent Road, Sea Point, Cape Town, 8005",
+  cuisine_type: "Greek, Mediterranean",
+  price_range: "$$",
+  description: "Authentic Greek taverna serving traditional meze, fresh seafood, and Greek specialties in a lively atmosphere.",
+  number_of_people: 4,
+  mood: "Authentic Greek, Lively, Traditional",
+  dietary_restrictions: ["Vegetarian", "Pescatarian"]
+)
+
+Restaurant.create!(
+  name: "Pier",
+  location: "Kalk Bay Harbour, Main Road, Kalk Bay, Cape Town, 7975",
+  cuisine_type: "Seafood, Casual Dining",
+  price_range: "$$",
+  description: "Harborside restaurant serving the freshest catch of the day with stunning mountain and ocean views.",
+  number_of_people: 4,
+  mood: "Harbor-Fresh, Casual, Scenic",
+  dietary_restrictions: ["Pescatarian", "Vegetarian"]
+)
+
+Restaurant.create!(
+  name: "Rust en Vrede",
+  location: "Annandale Road, Stellenbosch, 7600",
+  cuisine_type: "Fine Dining, Contemporary",
+  price_range: "$$$$",
+  description: "Historic wine estate restaurant offering sophisticated cuisine and wine pairings in an elegant setting.",
+  number_of_people: 2,
+  mood: "Historic, Wine-Focused, Sophisticated",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Salon",
+  location: "Roundhouse Road, Camps Bay, Cape Town, 8005",
+  cuisine_type: "Contemporary, Cocktail Bar",
+  price_range: "$$$",
+  description: "Stylish cocktail bar and dining space offering creative drinks and contemporary small plates.",
+  number_of_people: 2,
+  mood: "Stylish, Cocktail-Focused, Contemporary",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "Salsify at The Roundhouse",
+  location: "Roundhouse Road, Camps Bay, Cape Town, 8005",
+  cuisine_type: "Fine Dining, Contemporary",
+  price_range: "$$$$",
+  description: "Sister restaurant to Roundhouse offering innovative fine dining in a historic 18th-century setting.",
+  number_of_people: 2,
+  mood: "Historic, Innovative, Fine Dining",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "The Butcher Shop & Grill",
+  location: "Shop 42, Victoria Wharf Shopping Centre, V&A Waterfront, Cape Town, 8001",
+  cuisine_type: "Steakhouse, Grill",
+  price_range: "$$$",
+  description: "Premium butchery and grill specializing in dry-aged steaks and house-made charcuterie.",
+  number_of_people: 4,
+  mood: "Premium, Meat-Focused, Robust",
+  dietary_restrictions: ["Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "The Foodbarn",
+  location: "Noordhoek Farm Village, Village Lane, Noordhoek, Cape Town, 7979",
+  cuisine_type: "Contemporary, Farm-to-Table",
+  price_range: "$$$",
+  description: "Rustic-chic restaurant in a farm village setting offering seasonal cuisine with local ingredients.",
+  number_of_people: 4,
+  mood: "Rustic-Chic, Farm Village, Seasonal",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "The Happy Uncles",
+  location: "212 Long Street, Cape Town Central, 8000",
+  cuisine_type: "Asian, Fusion",
+  price_range: "$$",
+  description: "Quirky Asian fusion restaurant serving creative dishes with bold flavors in a fun, casual setting.",
+  number_of_people: 2,
+  mood: "Quirky, Fun, Bold Flavors",
+  dietary_restrictions: ["Vegetarian", "Vegan"]
+)
+
+Restaurant.create!(
+  name: "The Pot Luck Club",
+  location: "375 Albert Road, Woodstock, Cape Town, 8001",
+  cuisine_type: "Tapas, Contemporary",
+  price_range: "$$$",
+  description: "Sixth-floor tapas restaurant with panoramic city views and creative small plates from local ingredients.",
+  number_of_people: 4,
+  mood: "Panoramic Views, Creative, Social",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "The Red Room",
+  location: "60 Kloof Street, Gardens, Cape Town, 8001",
+  cuisine_type: "Contemporary, Wine Bar",
+  price_range: "$$$",
+  description: "Intimate wine bar and restaurant with a moody red interior serving contemporary cuisine and natural wines.",
+  number_of_people: 2,
+  mood: "Intimate, Moody, Wine-Focused",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "The Table at De Meye",
+  location: "45 Wellington Road, Wellington, 7654",
+  cuisine_type: "Contemporary, Wine Estate",
+  price_range: "$$$",
+  description: "Wine estate restaurant offering contemporary cuisine with vineyard views and wine pairings.",
+  number_of_people: 2,
+  mood: "Wine Estate, Contemporary, Vineyard Views",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "The Table at Oak Valley",
+  location: "321 Oak Valley Road, Elgin, 7180",
+  cuisine_type: "Contemporary, Wine Estate",
+  price_range: "$$$",
+  description: "Farm-to-table restaurant on a historic wine estate in the Elgin Valley offering seasonal contemporary cuisine.",
+  number_of_people: 4,
+  mood: "Farm-to-Table, Historic, Valley Views",
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+)
+
+Restaurant.create!(
+  name: "The Test Kitchen",
+  location: "375 Albert Road, Woodstock, Cape Town, 7915",
+  cuisine_type: "Fine Dining, Contemporary",
+  price_range: "$$$$",
+  description: "World-renowned restaurant offering innovative tasting menus combining South African ingredients with global techniques.",
+  number_of_people: 2,
+  mood: "World-Class, Innovative, Award-Winning",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
 )
