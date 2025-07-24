@@ -7,9 +7,7 @@ User.delete_all
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('restaurants')
 
-
 # Create test user
-
 User.create!(email: "test@example.com", password: "password123")
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 
@@ -21,18 +19,20 @@ Restaurant.create!(
   description: "Iconic seaside venue with ocean-splashed decks, hearty seafood, and live music vibes.",
   number_of_people: 4,
   mood: "Casual, Coastal, Lively",
-  dietary_restrictions: ["Pescatarian", "Vegetarian"]
+  dietary_restrictions: ["Pescatarian", "Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
   name: "Ocean Basket",
-  location: "Shop 17, Piazza St. John’s, Main Rd, Sea Point, Cape Town",
+  location: "Shop 17, Piazza St. John's, Main Rd, Sea Point, Cape Town",
   cuisine_type: "Seafood, Family Dining",
   price_range: "$$",
   description: "Family-friendly chain known for generous portions of grilled seafood, platters, and sushi.",
   number_of_people: 4,
   mood: "Family-Friendly, Bright, Informal",
-  dietary_restrictions: ["Pescatarian", "Vegetarian"]
+  dietary_restrictions: ["Pescatarian", "Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -43,7 +43,8 @@ Restaurant.create!(
   description: "Choose-your-own fresh seafood and sushi spot with a sushi belt and beachfront views.",
   number_of_people: 2,
   mood: "Fresh, Interactive, Beachy",
-  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -54,7 +55,8 @@ Restaurant.create!(
   description: "Legendary V&A Waterfront sushi destination with a casual vibe and cult following.",
   number_of_people: 2,
   mood: "Bustling, No-Frills, Iconic",
-  dietary_restrictions: ["Pescatarian", "Vegetarian"]
+  dietary_restrictions: ["Pescatarian", "Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -65,7 +67,8 @@ Restaurant.create!(
   description: "Elegant fine dining in a historic building, offering refined European-Asian fusion.",
   number_of_people: 2,
   mood: "Romantic, Elegant, Discreet",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -76,7 +79,8 @@ Restaurant.create!(
   description: "Authentic Lebanese manakish, wraps, and flatbreads fresh from the oven.",
   number_of_people: 2,
   mood: "Casual, Middle Eastern, Aromatic",
-  dietary_restrictions: ["Vegetarian", "Halal"]
+  dietary_restrictions: ["Vegetarian", "Halal"],
+  restaurant_image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -87,7 +91,8 @@ Restaurant.create!(
   description: "Laid-back beach braai experience in Langebaan with multi-course seafood cooked over fire.",
   number_of_people: 6,
   mood: "Rustic, Beach, Social",
-  dietary_restrictions: ["Pescatarian"]
+  dietary_restrictions: ["Pescatarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -95,10 +100,11 @@ Restaurant.create!(
   location: "The Roundhouse, Roundhouse Rd, Camps Bay, Cape Town, 8005",
   cuisine_type: "Fine Dining, Modern European",
   price_range: "$$$$",
-  description: "Historic venue nestled on the slopes of Lion’s Head offering elegant cuisine and nature views.",
+  description: "Historic venue nestled on the slopes of Lion's Head offering elegant cuisine and nature views.",
   number_of_people: 2,
   mood: "Refined, Forested, Tranquil",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -109,7 +115,8 @@ Restaurant.create!(
   description: "Five-star dining experience with Atlantic views and locally inspired cuisine.",
   number_of_people: 2,
   mood: "Luxurious, Oceanfront, Elegant",
-  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -120,7 +127,8 @@ Restaurant.create!(
   description: "Globally renowned sushi and Japanese-Peruvian fusion restaurant with a sleek interior.",
   number_of_people: 2,
   mood: "Glamorous, Exclusive, Sophisticated",
-  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -131,7 +139,8 @@ Restaurant.create!(
   description: "Intimate Japanese dining spot known for its minimalist style and fresh sushi and seafood.",
   number_of_people: 2,
   mood: "Zen, Elegant, Intimate",
-  dietary_restrictions: ["Pescatarian", "Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Pescatarian", "Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1583623025817-d180a2221d0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -142,7 +151,8 @@ Restaurant.create!(
   description: "Quick-service Thai food chain offering noodle dishes, curries, and stir-fries.",
   number_of_people: 2,
   mood: "Casual, Fast-Paced, Aromatic",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Halal"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Halal"],
+  restaurant_image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -153,7 +163,8 @@ Restaurant.create!(
   description: "Family-friendly pizzeria offering gourmet thin-based pizzas, pastas, and salads.",
   number_of_people: 4,
   mood: "Casual, Friendly, Kid-Friendly",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -164,7 +175,8 @@ Restaurant.create!(
   description: "Trendy spot for elevated comfort food, bold decor, and a strong cocktail menu.",
   number_of_people: 4,
   mood: "Vibrant, Urban, Social",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -175,7 +187,8 @@ Restaurant.create!(
   description: "Historic wine estate with seasonal menus, open-fire cooking, and a farm-to-table ethos.",
   number_of_people: 4,
   mood: "Rustic, Refined, Natural",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -186,7 +199,8 @@ Restaurant.create!(
   description: "Breathtaking garden estate with innovative dishes inspired by daily harvests.",
   number_of_people: 2,
   mood: "Organic, Peaceful, Stylish",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -197,7 +211,8 @@ Restaurant.create!(
   description: "Luxury wine estate offering world-class cuisine and panoramic vineyard views.",
   number_of_people: 2,
   mood: "Luxurious, Scenic, Sophisticated",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -208,7 +223,8 @@ Restaurant.create!(
   description: "Historic estate offering wine tastings and light pairings in serene Constantia settings.",
   number_of_people: 2,
   mood: "Serene, Wine-Centric, Refined",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -219,7 +235,8 @@ Restaurant.create!(
   description: "South Africa's oldest wine estate with relaxed restaurants and heritage-rich surroundings.",
   number_of_people: 4,
   mood: "Historic, Tranquil, Family-Friendly",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -230,7 +247,8 @@ Restaurant.create!(
   description: "Paarl-based farm featuring artisanal cheese, wine tastings, and farm-fresh dining.",
   number_of_people: 4,
   mood: "Country-Chic, Rustic, Informative",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -241,7 +259,8 @@ Restaurant.create!(
   description: "Stylish steakhouse known for its minimalist menu of steak, salad, and fries, paired with live jazz and cocktails.",
   number_of_people: 2,
   mood: "Trendy, Sophisticated, Intimate",
-  dietary_restrictions: ["Gluten-Free Options"]
+  dietary_restrictions: ["Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -252,7 +271,8 @@ Restaurant.create!(
   description: "Laid-back bistro offering hearty comfort food, local wines, and a cozy, Parisian-inspired atmosphere.",
   number_of_people: 4,
   mood: "Warm, Homely, Classic",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -263,7 +283,8 @@ Restaurant.create!(
   description: "Charming eatery with a focus on sustainable, wholesome meals and modern South African flair.",
   number_of_people: 2,
   mood: "Bright, Healthy, Thoughtful",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -274,7 +295,8 @@ Restaurant.create!(
   description: "Spanish-style tapas bar offering an inventive small-plates menu in a stylish, split-level space.",
   number_of_people: 2,
   mood: "Sociable, Modern, Lively",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -285,7 +307,8 @@ Restaurant.create!(
   description: "Colorful neighborhood favorite for fresh seafood with bold, global flavors and a welcoming atmosphere.",
   number_of_people: 2,
   mood: "Colorful, Relaxed, Local",
-  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -296,7 +319,8 @@ Restaurant.create!(
   description: "Eclectic mansion-turned-restaurant with bohemian decor, candlelit dining, and a lush courtyard.",
   number_of_people: 4,
   mood: "Romantic, Magical, Vintage",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -307,7 +331,8 @@ Restaurant.create!(
   description: "Buzzing Saturday market featuring artisan eats, global street food, and local makers.",
   number_of_people: 2,
   mood: "Lively, Urban, Diverse",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1567521464027-f32278ba6020?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -318,7 +343,8 @@ Restaurant.create!(
   description: "Steampunk-themed cafe serving ethically sourced coffee and elevated brunch classics.",
   number_of_people: 2,
   mood: "Edgy, Creative, Industrial",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -329,7 +355,8 @@ Restaurant.create!(
   description: "Hip bakery famous for inventive pastries, artisanal breads, and brunch with a twist.",
   number_of_people: 2,
   mood: "Trendy, Casual, Morning Buzz",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -340,7 +367,8 @@ Restaurant.create!(
   description: "Gritty, hidden gem known for massive gourmet burgers served in an informal setting.",
   number_of_people: 2,
   mood: "Underground, Bold, Laid-Back",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -351,7 +379,8 @@ Restaurant.create!(
   description: "Innovative dishes influenced by global street food, served in a stylish heritage home setting.",
   number_of_people: 2,
   mood: "Trendy, Creative, Relaxed",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -362,7 +391,8 @@ Restaurant.create!(
   description: "Trio of Japanese-inspired eateries housed in a 200-year-old building, known for bold flavors and cool decor.",
   number_of_people: 2,
   mood: "Hip, Playful, Eclectic",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -373,7 +403,8 @@ Restaurant.create!(
   description: "Chic Asian fusion restaurant serving dim sum, sushi, and wok dishes in a moody, elegant space.",
   number_of_people: 2,
   mood: "Sleek, Sophisticated, Intimate",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -384,7 +415,8 @@ Restaurant.create!(
   description: "Vibrant South Indian spot offering authentic dosas, thali platters, and fiery curries.",
   number_of_people: 2,
   mood: "Spicy, Colorful, Casual",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -395,7 +427,8 @@ Restaurant.create!(
   description: "Bean-to-bar chocolate cafe offering truffles, hot chocolate, and raw vegan treats in a cozy courtyard.",
   number_of_people: 2,
   mood: "Sweet, Cozy, Artisanal",
-  dietary_restrictions: ["Vegan", "Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegan", "Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1511381939415-e44015466834?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -406,7 +439,8 @@ Restaurant.create!(
   description: "Colorful African restaurant offering a feast of flavors from across the continent in a communal style.",
   number_of_people: 4,
   mood: "Cultural, Vibrant, Festive",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1547637589-f54c34f5d7a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -417,7 +451,8 @@ Restaurant.create!(
   description: "Elegant pan-African restaurant with drumming, storytelling, and a multi-course dining experience.",
   number_of_people: 4,
   mood: "Theatrical, Welcoming, Cultural",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -428,7 +463,8 @@ Restaurant.create!(
   description: "Lively restaurant and bar celebrating African cuisine, music, and culture with a laid-back vibe.",
   number_of_people: 4,
   mood: "Festive, Rustic, Upbeat",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -439,8 +475,11 @@ Restaurant.create!(
   description: "Scenic garden restaurant serving a modern twist on traditional African flavors with live performances.",
   number_of_people: 4,
   mood: "Outdoor, Cultural, Relaxed",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
+# Continuing restaurants from The African Cafe onwards...
 
 Restaurant.create!(
   name: "The African Cafe",
@@ -450,7 +489,8 @@ Restaurant.create!(
   description: "Artful African-themed restaurant dishing up homestyle fare with a welcoming, communal atmosphere.",
   number_of_people: 4,
   mood: "Cultural, Bright, Family-Style",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -461,7 +501,8 @@ Restaurant.create!(
   description: "Bohemian Indian eatery offering creative takes on curries, wraps, and vegetarian dishes in a relaxed setting.",
   number_of_people: 2,
   mood: "Casual, Artistic, Quirky",
-  dietary_restrictions: ["Vegetarian", "Vegan"]
+  dietary_restrictions: ["Vegetarian", "Vegan"],
+  restaurant_image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -472,7 +513,8 @@ Restaurant.create!(
   description: "Neighborhood bistro serving hearty European-style cuisine and an extensive wine selection.",
   number_of_people: 2,
   mood: "Casual, Cozy, Unpretentious",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -483,7 +525,8 @@ Restaurant.create!(
   description: "Family-friendly eatery with a leafy courtyard and hearty Mediterranean fare, including pasta and wood-fired pizza.",
   number_of_people: 4,
   mood: "Warm, Family-Friendly, Rustic",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -494,7 +537,8 @@ Restaurant.create!(
   description: "Long-standing restaurant offering classic Greek seafood dishes and grilled specialties near the oceanfront.",
   number_of_people: 4,
   mood: "Nautical, Relaxed, Traditional",
-  dietary_restrictions: ["Pescatarian", "Vegetarian"]
+  dietary_restrictions: ["Pescatarian", "Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -505,7 +549,8 @@ Restaurant.create!(
   description: "Relaxed Greek restaurant known for meze platters, souvlaki, and authentic Aegean-inspired décor.",
   number_of_people: 2,
   mood: "Mediterranean, Informal, Lively",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -516,7 +561,8 @@ Restaurant.create!(
   description: "Sophisticated bistro-style venue with elevated plating, creative dishes, and an elegant retro atmosphere.",
   number_of_people: 2,
   mood: "Upscale, Classic, Elegant",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -527,7 +573,8 @@ Restaurant.create!(
   description: "Reservation-only eatery with a surprise tasting menu using seasonal ingredients and nose-to-tail philosophy.",
   number_of_people: 2,
   mood: "Adventurous, Minimalist, Exclusive",
-  dietary_restrictions: ["Pescatarian", "Vegetarian"]
+  dietary_restrictions: ["Pescatarian", "Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -538,7 +585,8 @@ Restaurant.create!(
   description: "Wine estate restaurant with mountain views, offering seasonal menus inspired by the Overberg region.",
   number_of_people: 2,
   mood: "Scenic, Refined, Serene",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -549,8 +597,11 @@ Restaurant.create!(
   description: "Neighborhood pizzeria and grill with a relaxed terrace and menu of steaks, burgers, and pastas.",
   number_of_people: 4,
   mood: "Casual, Local, Laid-back",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
+# Batch 3: Next 11 restaurants (continuing from previous batches)
 
 Restaurant.create!(
   name: "Eighty-Ate",
@@ -560,7 +611,8 @@ Restaurant.create!(
   description: "Hotel restaurant known for elevated global cuisine, stylish interior, and quiet sophistication.",
   number_of_people: 2,
   mood: "Modern, Calm, Refined",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -571,7 +623,8 @@ Restaurant.create!(
   description: "Classic Cape Town steakhouse serving premium cuts of beef in a cozy, old-school setting.",
   number_of_people: 2,
   mood: "Traditional, Hearty, Intimate",
-  dietary_restrictions: ["Gluten-Free Options"]
+  dietary_restrictions: ["Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -582,7 +635,8 @@ Restaurant.create!(
   description: "Lush urban café and co-working space offering seasonal brunch and lunch dishes with a homey feel.",
   number_of_people: 2,
   mood: "Relaxed, Botanical, Artistic",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -593,7 +647,8 @@ Restaurant.create!(
   description: "Stylish beachfront restaurant with stunning ocean views, cocktails, and modern Mediterranean fare.",
   number_of_people: 2,
   mood: "Trendy, Beachy, Elegant",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -604,7 +659,8 @@ Restaurant.create!(
   description: "Rustic Italian pasta bar offering handmade fresh pasta dishes in a cozy downtown spot.",
   number_of_people: 2,
   mood: "Warm, Rustic, Authentic",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -615,7 +671,8 @@ Restaurant.create!(
   description: "Gourmet burger joint with juicy patties, loaded fries, and bold street-style flavors.",
   number_of_people: 2,
   mood: "Casual, Urban, Bold",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -626,7 +683,8 @@ Restaurant.create!(
   description: "Belgian-style brasserie with a harborside view, offering mussels, Belgian beers, and steaks.",
   number_of_people: 2,
   mood: "Classic, Waterfront, European",
-  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -637,7 +695,8 @@ Restaurant.create!(
   description: "Bustling harborfront eatery and bar serving seafood platters and live music in a casual setting.",
   number_of_people: 4,
   mood: "Lively, Nautical, Informal",
-  dietary_restrictions: ["Pescatarian", "Vegetarian"]
+  dietary_restrictions: ["Pescatarian", "Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -648,7 +707,8 @@ Restaurant.create!(
   description: "Upscale seafood destination with panoramic views and a menu of fresh shellfish and grills.",
   number_of_people: 2,
   mood: "Elegant, Scenic, Romantic",
-  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -659,7 +719,8 @@ Restaurant.create!(
   description: "Trendy ramen bar offering rich, umami-packed noodle bowls with house-made broth and toppings.",
   number_of_people: 2,
   mood: "Urban, Cool, Fast-Casual",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -670,8 +731,11 @@ Restaurant.create!(
   description: "Modern Cantonese eatery serving punchy small plates in a moody, minimalist interior.",
   number_of_people: 2,
   mood: "Trendy, Moody, Bold",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
+# Batch 4: Next 20 restaurants (continuing from previous batches)
 
 Restaurant.create!(
   name: "Blues Restaurant",
@@ -681,7 +745,8 @@ Restaurant.create!(
   description: "Beachfront restaurant with ocean views, known for seafood platters and international cuisine.",
   number_of_people: 2,
   mood: "Chic, Scenic, Relaxed",
-  dietary_restrictions: ["Pescatarian", "Vegetarian"]
+  dietary_restrictions: ["Pescatarian", "Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -692,7 +757,8 @@ Restaurant.create!(
   description: "Iconic beach bar venue offering cocktails and Mediterranean bites with views of Clifton Beach.",
   number_of_people: 4,
   mood: "Lively, Coastal, Casual",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -703,7 +769,8 @@ Restaurant.create!(
   description: "Upscale seaside Italian eatery with a modern menu of seafood and pastas, set on the Camps Bay strip.",
   number_of_people: 2,
   mood: "Elegant, Oceanfront, Stylish",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -714,7 +781,8 @@ Restaurant.create!(
   description: "Vegan-friendly Middle Eastern eatery with a playful twist on shawarma, hummus, and street food favorites.",
   number_of_people: 2,
   mood: "Trendy, Playful, Inclusive",
-  dietary_restrictions: ["Vegan", "Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegan", "Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -725,7 +793,8 @@ Restaurant.create!(
   description: "Iconic beachfront café and cocktail bar known for sundowners, DJs, and scenic vibes.",
   number_of_people: 4,
   mood: "Trendy, Party, Beachy",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -736,7 +805,8 @@ Restaurant.create!(
   description: "Luxurious Asian fusion restaurant set in a heritage estate, featuring Thai and Chinese classics.",
   number_of_people: 2,
   mood: "Elegant, Exotic, Historic",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -747,7 +817,8 @@ Restaurant.create!(
   description: "Seaside Thai restaurant offering traditional dishes and views over Table Bay.",
   number_of_people: 2,
   mood: "Romantic, Relaxed, Coastal",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -758,7 +829,8 @@ Restaurant.create!(
   description: "Vibrant Spanish tapas bar known for small plates, sangria, and lively ambiance.",
   number_of_people: 4,
   mood: "Festive, Vibrant, Social",
-  dietary_restrictions: ["Vegetarian"]
+  dietary_restrictions: ["Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -769,7 +841,8 @@ Restaurant.create!(
   description: "Elegant supper club-style venue with live jazz, seafood platters, and grilled meats.",
   number_of_people: 2,
   mood: "Classy, Glamorous, Evening",
-  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -780,8 +853,10 @@ Restaurant.create!(
   description: "Trendy eatery serving all-day breakfasts, burgers, and cocktails with a downtown NYC vibe.",
   number_of_people: 2,
   mood: "Hip, Urban, Eclectic",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
 Restaurant.create!(
   name: "Cattle Baron",
   location: "Shop 6, Victoria Wharf Shopping Centre, V&A Waterfront, Cape Town, 8001",
@@ -790,7 +865,8 @@ Restaurant.create!(
   description: "Premium steakhouse chain known for aged beef, grills, and hearty South African portions.",
   number_of_people: 4,
   mood: "Traditional, Masculine, Hearty",
-  dietary_restrictions: ["Gluten-Free Options"]
+  dietary_restrictions: ["Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -801,7 +877,8 @@ Restaurant.create!(
   description: "No-reservations tapas bar known for creative small plates and natural wines in a bustling atmosphere.",
   number_of_people: 2,
   mood: "Bustling, Creative, Unpretentious",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -812,7 +889,8 @@ Restaurant.create!(
   description: "Elevated dining experience on a wine estate with panoramic mountain views and seasonal menus.",
   number_of_people: 2,
   mood: "Scenic, Refined, Wine-Focused",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -823,7 +901,8 @@ Restaurant.create!(
   description: "Sophisticated rooftop restaurant with harbor views offering contemporary cuisine and cocktails.",
   number_of_people: 2,
   mood: "Upscale, Rooftop, Panoramic",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -834,7 +913,8 @@ Restaurant.create!(
   description: "Intimate restaurant in a converted theatre space offering creative contemporary cuisine.",
   number_of_people: 2,
   mood: "Intimate, Creative, Theatrical",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -845,7 +925,8 @@ Restaurant.create!(
   description: "Chic rooftop bar and restaurant with 360-degree city views and craft cocktails.",
   number_of_people: 4,
   mood: "Trendy, Panoramic, Evening",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -856,7 +937,8 @@ Restaurant.create!(
   description: "World-class restaurant combining Japanese techniques with South African ingredients in innovative tasting menus.",
   number_of_people: 2,
   mood: "Sophisticated, Innovative, World-Class",
-  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -867,7 +949,8 @@ Restaurant.create!(
   description: "Intimate wine bar serving seasonal small plates with an extensive natural wine selection.",
   number_of_people: 2,
   mood: "Intimate, Wine-Focused, Cozy",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -878,7 +961,8 @@ Restaurant.create!(
   description: "Waterfront seafood restaurant with harbor views specializing in fresh daily catches and ocean-to-table dining.",
   number_of_people: 4,
   mood: "Nautical, Fresh, Scenic",
-  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -889,8 +973,11 @@ Restaurant.create!(
   description: "Luxury Japanese restaurant on a wine estate offering authentic kaiseki cuisine with vineyard views.",
   number_of_people: 2,
   mood: "Luxurious, Authentic, Scenic",
-  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
+# Batch 5: Final 20 restaurants (completing 100 total)
 
 Restaurant.create!(
   name: "Hussar Grill",
@@ -900,7 +987,8 @@ Restaurant.create!(
   description: "Historic Cape Town steakhouse institution known for prime cuts, classic sides, and old-world service.",
   number_of_people: 2,
   mood: "Classic, Traditional, Masculine",
-  dietary_restrictions: ["Gluten-Free Options"]
+  dietary_restrictions: ["Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -911,7 +999,8 @@ Restaurant.create!(
   description: "Award-winning restaurant offering refined contemporary cuisine celebrating South African ingredients.",
   number_of_people: 2,
   mood: "Refined, Contemporary, Award-Winning",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -922,7 +1011,8 @@ Restaurant.create!(
   description: "World-renowned restaurant in the Constantia mountains offering sophisticated cuisine with spectacular valley views.",
   number_of_people: 2,
   mood: "World-Class, Scenic, Romantic",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -933,7 +1023,8 @@ Restaurant.create!(
   description: "Sister restaurant to La Colombe offering exceptional fine dining in the heart of Franschhoek.",
   number_of_people: 2,
   mood: "Elegant, Franschhoek, Fine Dining",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -944,7 +1035,8 @@ Restaurant.create!(
   description: "Intimate fine dining restaurant in a historic setting offering innovative seasonal cuisine.",
   number_of_people: 2,
   mood: "Intimate, Historic, Innovative",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -955,7 +1047,8 @@ Restaurant.create!(
   description: "Artisanal market and deli offering fresh produce, gourmet foods, and casual dining with ocean views.",
   number_of_people: 4,
   mood: "Fresh, Market-Style, Ocean Views",
-  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1567521464027-f32278ba6020?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -966,7 +1059,8 @@ Restaurant.create!(
   description: "Farm-to-table restaurant on a boutique wine estate offering seasonal cuisine with Hemel-en-Aarde views.",
   number_of_people: 2,
   mood: "Rural, Farm-to-Table, Peaceful",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -977,7 +1071,8 @@ Restaurant.create!(
   description: "Authentic Greek taverna serving traditional meze, fresh seafood, and Greek specialties in a lively atmosphere.",
   number_of_people: 4,
   mood: "Authentic Greek, Lively, Traditional",
-  dietary_restrictions: ["Vegetarian", "Pescatarian"]
+  dietary_restrictions: ["Vegetarian", "Pescatarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -988,7 +1083,8 @@ Restaurant.create!(
   description: "Harborside restaurant serving the freshest catch of the day with stunning mountain and ocean views.",
   number_of_people: 4,
   mood: "Harbor-Fresh, Casual, Scenic",
-  dietary_restrictions: ["Pescatarian", "Vegetarian"]
+  dietary_restrictions: ["Pescatarian", "Vegetarian"],
+  restaurant_image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -999,7 +1095,8 @@ Restaurant.create!(
   description: "Historic wine estate restaurant offering sophisticated cuisine and wine pairings in an elegant setting.",
   number_of_people: 2,
   mood: "Historic, Wine-Focused, Sophisticated",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1010,7 +1107,8 @@ Restaurant.create!(
   description: "Stylish cocktail bar and dining space offering creative drinks and contemporary small plates.",
   number_of_people: 2,
   mood: "Stylish, Cocktail-Focused, Contemporary",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1021,7 +1119,8 @@ Restaurant.create!(
   description: "Sister restaurant to Roundhouse offering innovative fine dining in a historic 18th-century setting.",
   number_of_people: 2,
   mood: "Historic, Innovative, Fine Dining",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1032,7 +1131,8 @@ Restaurant.create!(
   description: "Premium butchery and grill specializing in dry-aged steaks and house-made charcuterie.",
   number_of_people: 4,
   mood: "Premium, Meat-Focused, Robust",
-  dietary_restrictions: ["Gluten-Free Options"]
+  dietary_restrictions: ["Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1043,7 +1143,8 @@ Restaurant.create!(
   description: "Rustic-chic restaurant in a farm village setting offering seasonal cuisine with local ingredients.",
   number_of_people: 4,
   mood: "Rustic-Chic, Farm Village, Seasonal",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1054,7 +1155,8 @@ Restaurant.create!(
   description: "Quirky Asian fusion restaurant serving creative dishes with bold flavors in a fun, casual setting.",
   number_of_people: 2,
   mood: "Quirky, Fun, Bold Flavors",
-  dietary_restrictions: ["Vegetarian", "Vegan"]
+  dietary_restrictions: ["Vegetarian", "Vegan"],
+  restaurant_image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1065,7 +1167,8 @@ Restaurant.create!(
   description: "Sixth-floor tapas restaurant with panoramic city views and creative small plates from local ingredients.",
   number_of_people: 4,
   mood: "Panoramic Views, Creative, Social",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1076,7 +1179,8 @@ Restaurant.create!(
   description: "Intimate wine bar and restaurant with a moody red interior serving contemporary cuisine and natural wines.",
   number_of_people: 2,
   mood: "Intimate, Moody, Wine-Focused",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1087,7 +1191,8 @@ Restaurant.create!(
   description: "Wine estate restaurant offering contemporary cuisine with vineyard views and wine pairings.",
   number_of_people: 2,
   mood: "Wine Estate, Contemporary, Vineyard Views",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1098,7 +1203,8 @@ Restaurant.create!(
   description: "Farm-to-table restaurant on a historic wine estate in the Elgin Valley offering seasonal contemporary cuisine.",
   number_of_people: 4,
   mood: "Farm-to-Table, Historic, Valley Views",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1109,5 +1215,8 @@ Restaurant.create!(
   description: "World-renowned restaurant offering innovative tasting menus combining South African ingredients with global techniques.",
   number_of_people: 2,
   mood: "World-Class, Innovative, Award-Winning",
-  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"]
+  dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
+puts "Final batch complete! Total restaurants created: 100"
