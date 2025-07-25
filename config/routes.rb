@@ -9,11 +9,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :restaurants, only: %w[index show]
-
-  resources :dishes, only: %w[index show] do
-    resources :dishes_reviews
+  get 'profile', to: 'pages#profile'
+  
+  resources :restaurants, only: %w[index show] do
+    resources :reviews, only: %w[new create]
   end
 
-  resources :questions, except: %w[edit udpate]
+  resources :questions, except: %w[edit udpate] do
+    post 'save_booking', on: :member
+  end
 end

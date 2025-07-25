@@ -1,0 +1,10 @@
+<h2>We recommend: <%= @question.restaurant.name || "No match found" %></h2>
+<p><strong>Why:</strong> <%= @question.ai_reasoning %></p>
+
+<div class="button-group">
+  <%= button_to "Save to My Profile", save_booking_question_path(@question),
+        method: :post,
+        class: "btn btn-success" %>
+
+  <%= link_to "Discard", root_path, class: "btn btn-outline-danger", data: { turbo: false } %>
+</div>
