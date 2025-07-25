@@ -8,8 +8,16 @@
 @import "font-awesome";
 
 // Your CSS partials
+@import "components/custom";
+@import "components/mixins"; // This should come before any file that uses the mixin
+@import "components/pages-home";
 @import "components/index";
 @import "pages/index";
 @import url("https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css");
 @import "components/restaurant_index";
 @import "components/map";
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
