@@ -1,0 +1,30 @@
+<div class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10">
+      <div id="map" class="w-100 mb-4" style="height: 600px;"
+          data-controller="map"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+          data-map-markers-value="<%= @markers.to_json %>">
+      </div>
+
+      <div class="restaurant-cards-container">
+        <% @questions.each do |question| %>
+            <div class="card">
+            <h5 class="card-title"><%= question.restaurant.name %></h5>
+            <% user_review = question.restaurant.reviews.find_by(user: current_user) %>
+            <% if user_review %>
+              <p>Rating: <%= user_review.rating %></p>
+
+              <% if user_review.photos.attached? %>
+                <% user_review.photos.each do |photo| %>
+                  <%= cl_image_tag photo.key, width: 150, height: 150, crop: :fill %>
+                <% end %>
+              <% end %>
+            <% else %>
+              <p>No review yet</p>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
