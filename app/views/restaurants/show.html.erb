@@ -2,7 +2,7 @@
 <div class="d-flex align-items-center justify-content-center mb-5" style="height: 100vh;">
   <div class="card" style="width: 36rem;">
         <!-- card content -->
-    <%= image_tag 'restaurant-image.avif', class: 'card-img-top', alt: @restaurant.name %>
+    <%= image_tag @restaurant.restaurant_image, class: 'card-img-top', alt: @restaurant.name %>
 
     <div class="card-body">
       <h5 class="card-title"><%= @restaurant.name %></h5>
@@ -13,13 +13,12 @@
       <li class="list-group-item"><strong>Location:</strong> <%= @restaurant.location %></li>
       <li class="list-group-item"><strong>Cuisine:</strong> <%= @restaurant.cuisine_type %></li>
       <li class="list-group-item"><strong>Price Range:</strong> <%= @restaurant.price_range %></li>
-      <li class="list-group-item"><strong>Serves:</strong> <%= @restaurant.number_of_people %> people</li>
-      <li class="list-group-item"><strong>Mood:</strong> <%= @restaurant.mood %></li>
-      <li class="list-group-item"><strong>Dietary:</strong> <%= @restaurant.dietary_restrictions.join(', ') %></li>
     </ul>
 
+    <%= link_to "Make it a memory", new_restaurant_review_path(@restaurant), class: "btn btn-outline-primary" %>
+
     <div class="card-body">
-      
+
     </div>
   </div>
 

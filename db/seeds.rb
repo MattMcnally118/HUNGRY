@@ -1,5 +1,7 @@
 # Clear existing data in correct order
+Review.delete_all
 Question.delete_all
+Booking.delete_all
 Restaurant.delete_all
 User.delete_all
 
@@ -130,6 +132,8 @@ Restaurant.create!(
   dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"],
   restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
+# First batch #10
 
 Restaurant.create!(
   name: "Kyoto Garden Sushi",
@@ -883,7 +887,7 @@ Restaurant.create!(
 
 Restaurant.create!(
   name: "Chef's Warehouse Beau Constantia",
-  location: "1 Beau Constantia Road, Constantia, Cape Town, 7806",
+  location: "Beau Constantia Wine Farm, 1043 Constantia Main Road, Constantia Neck, Cape Town, 7806",
   cuisine_type: "Contemporary, Wine Estate",
   price_range: "$$$$",
   description: "Elevated dining experience on a wine estate with panoramic mountain views and seasonal menus.",
@@ -1185,7 +1189,7 @@ Restaurant.create!(
 
 Restaurant.create!(
   name: "The Table at De Meye",
-  location: "45 Wellington Road, Wellington, 7654",
+  location: "101 old Paarl road, Muldersvlei Rd, Stellenbosch, Cape Town, 7599",
   cuisine_type: "Contemporary, Wine Estate",
   price_range: "$$$",
   description: "Wine estate restaurant offering contemporary cuisine with vineyard views and wine pairings.",
@@ -1197,7 +1201,7 @@ Restaurant.create!(
 
 Restaurant.create!(
   name: "The Table at Oak Valley",
-  location: "321 Oak Valley Road, Elgin, 7180",
+  location: "Oak Valley Estate, 127 Oak Ave, Elgin,  Grabouw, Western Cape, South Africa, 7180",
   cuisine_type: "Contemporary, Wine Estate",
   price_range: "$$$",
   description: "Farm-to-table restaurant on a historic wine estate in the Elgin Valley offering seasonal contemporary cuisine.",
