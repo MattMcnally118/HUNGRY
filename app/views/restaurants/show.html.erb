@@ -1,5 +1,5 @@
 
-<div class="d-flex align-items-center justify-content-center mb-5" style="height: 100vh;">
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
   <div class="card" style="width: 36rem;">
         <!-- card content -->
     <%= image_tag @restaurant.restaurant_image, class: 'card-img-top', alt: @restaurant.name %>
@@ -15,7 +15,7 @@
       <li class="list-group-item"><strong>Price Range:</strong> <%= @restaurant.price_range %></li>
     </ul>
 
-    <%= link_to "Make it a memory", new_restaurant_review_path(@restaurant), class: "btn btn-outline-primary" %>
+    <%= link_to "Make it a memory", new_restaurant_review_path(@restaurant), class: "btn btn-ghost" %>
 
     <div class="card-body">
 

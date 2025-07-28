@@ -1,10 +1,25 @@
-<h2>We recommend: <%= @question.restaurant.name || "No match found" %></h2>
+
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100 mt-5">
+  <div class="card" style="width: 18rem;">
+  <%= image_tag "restaurant-image.avif",
+              class: "restaurant-image",
+              alt: "Description of the restaurant" %>
+<div class="card-body">
+    <h2>We recommend: <%= @question.restaurant.name || "No match found" %></h2>
 <p><strong>Why:</strong> <%= @question.ai_reasoning %></p>
-
-<div class="button-group">
-  <%= button_to "Save to My Profile", save_booking_question_path(@question),
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <div class="card-body">
+     <%= button_to "Save to My Profile", save_booking_question_path(@question),
         method: :post,
-        class: "btn btn-success" %>
+        class: "btn btn-ghost" %>
 
-  <%= link_to "Discard", root_path, class: "btn btn-outline-danger", data: { turbo: false } %>
+  <%= link_to "Discard", root_path, class: "btn btn-ghost1", data: { turbo: false } %>
+  </div>
+</div>
 </div>
