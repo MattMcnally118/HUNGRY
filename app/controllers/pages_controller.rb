@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @questions = current_user.questions.includes(:restaurant)
+    @questions = current_user.questions.includes(:restaurant).reject { |q| q.restaurant.nil? }
 
     # Get all restaurants tied to those questions
     @restaurants = @questions.map(&:restaurant).compact.uniq.select(&:geocoded?)

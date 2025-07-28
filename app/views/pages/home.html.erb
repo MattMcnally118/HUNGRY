@@ -1,17 +1,19 @@
 
+<div class="homepage-container">
 
 
-  <div class="banner text-center">
-<h1 class="display-1"><strong>HUNGRY?</strong>..!</h1>
-    <p class="lead">Change your life and learn to code at one of our campuses around the world.</p>
+  <div class="floating-circle circle-1"></div>
+  <div class="floating-circle circle-2"></div>
+  <div class="floating-circle circle-3"></div>
+  <div class="floating-circle circle-4"></div>
 
-</div>
+  <h1>Hungry?</h1>
+  <p class="homepage-subheading">Let’s find your next favourite spot.</p>
 
-<div class="container text-center ">
+  <%= link_to "Find a Restaurant", new_question_path, class: "btn-find" %>
 
-  <!-- Columns are always 50% wide, on mobile and desktop -->
-  <div class="row">
-    <div class="col-6 text-center"> <%= link_to "Find a Restaurant", new_question_path, class:"btn btn-ghost1" %></div>
-    <div class="col-6 text-center"><a class="btn btn-ghost border border shadow-dark" href="#">Surprise Me</a></div>
-  </div>
+  <button class="btn-surprise">
+    Surprise Me
+  </button>
+
 </div>
