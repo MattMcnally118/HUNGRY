@@ -75,10 +75,10 @@ ActiveRecord::Schema[7.1].define(version: 2025_07_25_140357) do
     t.integer "number_of_people"
     t.string "mood"
     t.text "dietary_restrictions", default: [], array: true
-    t.string "restaurant_image"
     t.float "latitude"
     t.float "longitude"
-    t.vector "embedding"
+    t.string "restaurant_image"
+    t.vector "embedding", limit: 1536
   end
 
   create_table "reviews", force: :cascade do |t|
