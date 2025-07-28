@@ -30,6 +30,7 @@ gem "jbuilder"
 gem "geocoder"
 gem "ruby-openai"
 gem 'cloudinary'
+gem 'neighbor'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
