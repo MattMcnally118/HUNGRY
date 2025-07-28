@@ -1,0 +1,32 @@
+<!-- shared/_footer.html.erb -->
+<footer class="footer bg-dark text-white py-4 mt-auto">
+  <div class="container text-center text-md-start">
+    <div class="row align-items-center">
+
+      <!-- Left: App name or logo -->
+      <!-- Left: Logo + App Name -->
+  <div class="col-md-4 mb-3 mb-md-0 text-center text-md-start d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+    <%= image_tag("logo1.png", alt: "Hungry Logo", width: 60, height: 60, class: "footer-logo") %>
+    <div>
+      <p class="small text-muted mb-0">&copy; <%= Time.current.year %> Hungry App</p>
+    </div>
+  </div>
+
+
+      <!-- Center: Links -->
+      <div class="col-md-4 mb-3 mb-md-0 text-center">
+        <a href="/" class="text-white me-3 small">Home</a>
+        <a href="/profile" class="text-white me-3 small">Profile</a>
+        <a href="/contact" class="text-white small">Contact</a>
+      </div>
+
+      <!-- Right: Social Icons -->
+      <div class="col-md-4 text-center text-md-end">
+        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white me-2"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+      </div>
+
+    </div>
+  </div>
+</footer>

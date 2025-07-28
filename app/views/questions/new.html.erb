@@ -1,40 +1,56 @@
-<%= simple_form_for @question do |f| %>
-  <div>
-    <%= f.input :price_range,
-            as: :select,
-            collection: ['$', '$$', '$$$', '$$$$', '$$$$$'],
-            prompt: 'Select your budget',
-            label: 'What’s your budget?' %>
-  </div>
 
-  <div>
-    <%= f.input :number_of_people,
-            as: :integer,
-            input_html: { placeholder: 'Enter number of diners' },
-            label: 'How many people are you eating with?' %>
-  </div>
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card custom-form-card p-4">
+        <%= simple_form_for @question do |f| %>
 
-  <div>
-    <%= f.input :current_mood,
-            as: :string,
-            input_html: { placeholder: 'e.g. Casual, Romantic, Family-Friendly, Trendy' },
-            hint: "Describe the vibe you’re going for. One word is enough.",
-            label: "What’s the mood of the restaurant you're looking for?" %>
-  </div>
+          <div class="mb-4">
+            <%= f.input :price_range,
+                    as: :select,
+                    collection: ['$', '$$', '$$$', '$$$$', '$$$$$'],
+                    prompt: 'Select your budget',
+                    label: 'What’s your budget?' %>
+          </div>
 
-  <%= f.input :dietary_restrictions,
-            as: :radio_buttons,
-            collection: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Pescatarian', 'None'],
-            label: 'Do you have any dietary restrictions?',
-            item_wrapper_tag: :div %>
+          <div class="mb-4">
+            <%= f.input :number_of_people,
+                    as: :integer,
+                    input_html: { placeholder: 'Enter number of diners' },
+                    label: 'How many people are you eating with?' %>
+          </div>
 
-  <div>
-    <%= f.input :cuisine_type,
-            input_html: { placeholder: 'e.g. Japanese, Contemporary, African, Fine-Dining' },
-            label: 'What kind of cuisine are you craving?' %>
-  </div>
+          <div class="mb-4">
+            <%= f.input :current_mood,
+                    as: :string,
+                    input_html: { placeholder: 'e.g. Casual, Romantic, Family-Friendly, Trendy' },
+                    hint: "Describe the vibe you’re going for. One word is enough.",
+                    label: "What’s the mood of the restaurant you're looking for?" %>
+          </div>
 
-  <div class="mb-3 text-center">
-    <%= f.button :submit, "Submit", class: 'btn btn-primary' %>
+          <div class="mb-4">
+            <%= f.input :dietary_restrictions,
+                    as: :radio_buttons,
+                    collection: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Pescatarian', 'None'],
+                    label: 'Do you have any dietary restrictions?',
+                    item_wrapper_tag: :div,
+                    item_wrapper_class: 'form-check',
+                    collection_wrapper_tag: 'div',
+                    collection_wrapper_class: 'd-flex flex-wrap gap-3' %>
+          </div>
+
+          <div class="mb-4">
+            <%= f.input :cuisine_type,
+                    input_html: { placeholder: 'e.g. Japanese, Contemporary, African, Fine-Dining' },
+                    label: 'What kind of cuisine are you craving?' %>
+          </div>
+
+          <div class="text-center">
+            <%= f.button :submit, "Find My Next Adventure", class: 'btn-find' %>
+          </div>
+
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>

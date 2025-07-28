@@ -33,8 +33,9 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to questions_url, notice: 'Question was successfully destroyed.'
+    redirect_to root_path, status: :see_other
   end
+
 
   def save_booking
     Booking.create!(

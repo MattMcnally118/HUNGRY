@@ -78,7 +78,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_07_25_140357) do
     t.float "latitude"
     t.float "longitude"
     t.string "restaurant_image"
-    t.vector "embedding", limit: 1536
+    t.vector "embedding"
   end
 
   create_table "reviews", force: :cascade do |t|
