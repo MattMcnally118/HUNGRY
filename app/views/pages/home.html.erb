@@ -1,24 +1,17 @@
-<<<<<<< HEAD
 
 
 
-  <div class="banner">
-<h1> <strong>HUNGRY?</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
+  <div class="banner text-center">
+<h1 class="display-1"><strong>HUNGRY?</strong>..!</h1>
+    <p class="lead">Change your life and learn to code at one of our campuses around the world.</p>
+
 </div>
 
-  <div class="container-flex">
-    <a class="btn btn-ghost1" href="#">Find a restaurant</a>
-    <a class="btn btn-ghost" href="#">Get started</a>
+<div class="container text-center ">
+
+  <!-- Columns are always 50% wide, on mobile and desktop -->
+  <div class="row">
+    <div class="col-6 text-center"> <%= link_to "Find a Restaurant", new_question_path, class:"btn btn-ghost1" %></div>
+    <div class="col-6 text-center"><a class="btn btn-ghost border border shadow-dark" href="#">Surprise Me</a></div>
   </div>
 </div>
-=======
-<h1>Hungry?</h1>
-
-
-
-<%= link_to "Find a Restaurant", new_question_path, class: "btn btn-primary" %>
-<button class="surprise-button">
-  Surprise Me
-</button>
->>>>>>> origin
