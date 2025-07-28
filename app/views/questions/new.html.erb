@@ -1,53 +1,56 @@
-<div class="container d-flex justify-content-center align-items-center min-vh-100 mt-5">
-  <div class="bg-white border shadow-lg rounded-4 p-4" style="max-width: 500px;">
-    <h2 class="mb-4 text-center">Tell us about your preferences</h2>
 
-    <%= simple_form_for @question do |f| %>
-      <div class="mb-3">
-        <%= f.input :price_range,
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card custom-form-card p-4">
+        <%= simple_form_for @question do |f| %>
+
+          <div class="mb-4">
+            <%= f.input :price_range,
                     as: :select,
                     collection: ['$', '$$', '$$$', '$$$$', '$$$$$'],
                     prompt: 'Select your budget',
-                    label: "What’s your budget?",
-                    input_html: { class: 'form-select rounded-pill' } %>
-      </div>
+                    label: 'What’s your budget?' %>
+          </div>
 
-      <div class="mb-3">
-        <%= f.input :number_of_people,
+          <div class="mb-4">
+            <%= f.input :number_of_people,
                     as: :integer,
-                    label: "How many people are you eating with?",
-                    input_html: { type: 'number', class: 'form-control rounded-pill', placeholder: 'Enter number of diners' } %>
-      </div>
+                    input_html: { placeholder: 'Enter number of diners' },
+                    label: 'How many people are you eating with?' %>
+          </div>
 
-      <div class="mb-3">
-        <%= f.input :current_mood,
+          <div class="mb-4">
+            <%= f.input :current_mood,
                     as: :string,
-                    label: "What’s the mood of the restaurant you're looking for?",
-                    hint: "One word atmosphere, e.g. Casual, Romantic, Trendy",
-                    input_html: { class: 'form-control rounded-pill', placeholder: 'e.g. Casual, Romantic, Family‑Friendly' } %>
-      </div>
+                    input_html: { placeholder: 'e.g. Casual, Romantic, Family-Friendly, Trendy' },
+                    hint: "Describe the vibe you’re going for. One word is enough.",
+                    label: "What’s the mood of the restaurant you're looking for?" %>
+          </div>
 
-      <div class="mb-3">
-        <%= f.input :dietary_restrictions,
+          <div class="mb-4">
+            <%= f.input :dietary_restrictions,
                     as: :radio_buttons,
-                    collection: ['Vegetarian', 'Vegan', 'Gluten‑Free', 'Pescatarian', 'None'],
+                    collection: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Pescatarian', 'None'],
                     label: 'Do you have any dietary restrictions?',
                     item_wrapper_tag: :div,
-                    wrapper_html: { class: 'form-check' },
-                    input_html: { class: 'form-check-input rounded' },
-                    label_html: { class: 'form-check-label' } %>
-      </div>
+                    item_wrapper_class: 'form-check',
+                    collection_wrapper_tag: 'div',
+                    collection_wrapper_class: 'd-flex flex-wrap gap-3' %>
+          </div>
 
-      <div class="mb-3">
-        <%= f.input :cuisine_type,
-                    as: :string,
-                    label: 'What kind of cuisine are you craving?',
-                    input_html: { class: 'form-control rounded-pill', placeholder: 'e.g. Japanese, Fine‑Dining, African' } %>
-      </div>
+          <div class="mb-4">
+            <%= f.input :cuisine_type,
+                    input_html: { placeholder: 'e.g. Japanese, Contemporary, African, Fine-Dining' },
+                    label: 'What kind of cuisine are you craving?' %>
+          </div>
 
-      <div class="text-center">
-        <%= f.button :submit, 'Submit', class: 'btn btn-ghost rounded-pill px-5' %>
+          <div class="text-center">
+            <%= f.button :submit, "Find My Next Adventure", class: 'btn-find' %>
+          </div>
+
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>

@@ -1,25 +1,30 @@
 
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6 text-center">
 
-<div class="container d-flex justify-content-center align-items-center min-vh-100 mt-5">
-  <div class="card" style="width: 18rem;">
-  <%= image_tag "restaurant-image.avif",
-              class: "restaurant-image",
-              alt: "Description of the restaurant" %>
-<div class="card-body">
-    <h2>We recommend: <%= @question.restaurant.name || "No match found" %></h2>
-<p><strong>Why:</strong> <%= @question.ai_reasoning %></p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
-  <div class="card-body">
-     <%= button_to "Save to My Profile", save_booking_question_path(@question),
-        method: :post,
-        class: "btn btn-ghost" %>
+      <h2 class="mb-3">We recommend:
+        <%= @question.restaurant&.name || "No match found" %>
+      </h2>
 
-  <%= link_to "Discard", root_path, class: "btn btn-ghost1", data: { turbo: false } %>
+      <p class="mb-4">
+        <strong>Why:</strong> <%= @question.ai_reasoning %>
+      </p>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
+
+      <div>
+        <%= button_to "Save to My Profile", save_booking_question_path(@question),
+              method: :post,
+              class: "btn-find" %>
+      </div>
+
+      <div>
+        <%= link_to "Discard", question_path(@question),
+              class: "btn-discard",
+              data: { turbo_method: "delete", turbo_confirm: "Are you sure?" } %>
+      </div>
+
+    </div>
   </div>
-</div>
 </div>
