@@ -1,56 +1,69 @@
-
-<div class="container my-5">
+<div class="form-container" data-controller="loader">
   <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-6">
-      <div class="card custom-form-card p-4">
-        <%= simple_form_for @question do |f| %>
+      <div class="form-card">
+        <div class="form-card-header">
+          <h2>What Kind of Restaurant Are You Looking For?</h2>
+        </div>
+        <div class="form-card-body">
+          <%= simple_form_for @question, data: {
+              turbo: true,
+              action: "turbo:submit-start->loader#show"
+            } do |f| %>
 
-          <div class="mb-4">
-            <%= f.input :price_range,
-                    as: :select,
-                    collection: ['$', '$$', '$$$', '$$$$', '$$$$$'],
-                    prompt: 'Select your budget',
-                    label: 'What’s your budget?' %>
-          </div>
+            <div class="mb-4">
+              <%= f.input :price_range,
+                      as: :select,
+                      collection: ['$', '$$', '$$$', '$$$$', '$$$$$'],
+                      prompt: 'Select your budget',
+                      label: 'What’s your budget?' %>
+            </div>
 
-          <div class="mb-4">
-            <%= f.input :number_of_people,
-                    as: :integer,
-                    input_html: { placeholder: 'Enter number of diners' },
-                    label: 'How many people are you eating with?' %>
-          </div>
+            <div class="mb-4">
+              <%= f.input :number_of_people,
+                      as: :integer,
+                      input_html: { placeholder: 'Enter number of diners', min: 1 },
+                      label: 'How many people are you eating with?' %>
+            </div>
 
-          <div class="mb-4">
-            <%= f.input :current_mood,
-                    as: :string,
-                    input_html: { placeholder: 'e.g. Casual, Romantic, Family-Friendly, Trendy' },
-                    hint: "Describe the vibe you’re going for. One word is enough.",
-                    label: "What’s the mood of the restaurant you're looking for?" %>
-          </div>
+            <div class="mb-4">
+              <%= f.input :current_mood,
+                      as: :string,
+                      input_html: { placeholder: 'e.g. Casual, Romantic, Family-Friendly, Trendy' },
+                      hint: "Describe the vibe you’re going for. One word is enough.",
+                      label: "What’s the mood of the restaurant you're looking for?" %>
+            </div>
 
-          <div class="mb-4">
-            <%= f.input :dietary_restrictions,
-                    as: :radio_buttons,
-                    collection: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Pescatarian', 'None'],
-                    label: 'Do you have any dietary restrictions?',
-                    item_wrapper_tag: :div,
-                    item_wrapper_class: 'form-check',
-                    collection_wrapper_tag: 'div',
-                    collection_wrapper_class: 'd-flex flex-wrap gap-3' %>
-          </div>
+            <div class="mb-4">
+              <%= f.input :dietary_restrictions,
+                  as: :radio_buttons,
+                  collection: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Pescatarian', 'None'],
+                  label: 'Do you have any dietary restrictions?',
+                  item_wrapper_tag: :div,
+                  item_wrapper_class: 'pill-option',
+                  collection_wrapper_tag: 'div',
+                  collection_wrapper_class: 'd-flex flex-wrap gap-2' %>
+              </div>
 
-          <div class="mb-4">
-            <%= f.input :cuisine_type,
-                    input_html: { placeholder: 'e.g. Japanese, Contemporary, African, Fine-Dining' },
-                    label: 'What kind of cuisine are you craving?' %>
-          </div>
+            <div class="mb-4">
+              <%= f.input :cuisine_type,
+                      input_html: { placeholder: 'e.g. Japanese, Contemporary, African, Fine-Dining' },
+                      label: 'What kind of cuisine are you craving?' %>
+            </div>
 
-          <div class="text-center">
-            <%= f.button :submit, "Find My Next Adventure", class: 'btn-surprise' %>
-          </div>
-
-        <% end %>
+            <div class="text-center">
+              <%= f.button :submit, "Find My Next Adventure", class: 'btn-form' %>
+            </div>
+          <% end %>
+        </div>
       </div>
+    </div>
+  </div>
+    <div id="loading-overlay" class="loading-overlay" data-loader-target="overlay">
+      <div class="loading-content text-center">
+        <h2 class="loading-heading">Finding your ideal restaurant...</h2>
+      <div class="spinner"></div>
+        <p class="loading-text">Loading…</p>
     </div>
   </div>
 </div>

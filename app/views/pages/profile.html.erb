@@ -1,54 +1,51 @@
-<div class="container">
-  <!-- Content here -->
-  <div class="container my-4">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-10">
-      <div id="map" class="w-100 mb-4" style="height: 600px;"
-          data-controller="map"
-          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-          data-map-markers-value="<%= @markers.to_json %>">
-      </div>
+<div class="profile-container">
 
-      <div class="container py-5">
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
-    <% @questions.each do |question| %>
-      <% restaurant = question.restaurant %>
-      <% user_review = restaurant.reviews.find_by(user: current_user) %>
+    <div id="map"
+      class="mapbox"
+      data-controller="map"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      data-map-markers-value="<%= @markers.to_json %>">
+    </div>
 
-      <div class="col d-flex align-items-stretch">
-        <div class="card rounded-4 shadow-sm">
-          <% if user_review&.photos&.attached? %>
-            <%= cl_image_tag user_review.photos.first.key,
-                              class: "card-img-top rounded-top-4",
-                              width: 300, height: 200,
-                              crop: :fill,
-                              alt: "#{restaurant.name} review photo" %>
-          <% else %>
-            <%= image_tag "https://placehold.co/400",
-              class: "card-img-top rounded-top-4",
-              alt: "No review image available" %>
 
-          <% end %>
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title"><%= restaurant.name %></h5>
-
-            <% if user_review %>
-              <p class="card-text mb-2"><strong>Rating:</strong> <%= user_review.rating %> ⭐</p>
-            <% else %>
-              <p class="card-text mb-2 text-muted">No review yet</p>
-            <% end %>
-
-            <div class="mt-auto">
-              <%= link_to "Review #{restaurant.name}", restaurant_reviews_path(restaurant), class: "btn btn-ghost rounded-pill w-100" %>
+        <div class="questions-container">
+          <% @questions.each do |question| %>
+          <% restaurant = question.restaurant %>
+          <% user_review = restaurant.reviews.find_by(user: current_user) %>
+        <div class="question-card">
+            <div class="question-card-heading">
+              <h5 class="question-card-title"><%= restaurant.name %></h5>
             </div>
+          <% if user_review&.photos.present? %>
+              <div class="review-gallery">
+                <% user_review.photos.each_with_index do |photo, index| %>
+                  <%= cl_image_tag photo.key,
+                        class: "gallery-image gallery-image-#{index % 6}",
+                        alt: "#{restaurant.name} review photo ##{index + 1}" %>
+                <% end %>
+          <% else %>
+            <div class="review-gallery-empty">
+              <div class="no-image-placeholder">
+                <span>📸 No photos yet</span>
+              </div>
+            </div>
+          <% end %>
+            <% if user_review %>
+              <div class="rating-overlay">
+                <% user_review.rating.to_i.times do %>
+                  <span class="star">⭐</span>
+                <% end %>
+              </div>
+            <% else %>
+              <div class="rating-overlay rating-pending">
+                <span>Rating pending</span>
+              </div>
+            <% end %>
+              </div>
+              <div class="question-card-button">
+                <%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant), class: "btn-confirm" %>
+              </div>
           </div>
+          <% end %>
         </div>
-      </div>
-
-    <% end %>
-  </div>
-</div>
-
-  </div>
-</div>
 </div>
