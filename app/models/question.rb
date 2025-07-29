@@ -7,6 +7,13 @@ class Question < ApplicationRecord
   after_create :generate_embedding!
   before_validation :preferences
 
+  def cleaned_ai_reasoning
+    return "" if ai_reasoning.blank?
+
+    cleaned = ai_reasoning.to_s.sub(/^Restaurant Name:.*?\bbecause\b/i, "Because")
+    cleaned.strip.capitalize
+  end
+
   private
 
   def generate_embedding!
@@ -41,4 +48,5 @@ class Question < ApplicationRecord
       cuisine_type: cuisine_type
     }
   end
+
 end

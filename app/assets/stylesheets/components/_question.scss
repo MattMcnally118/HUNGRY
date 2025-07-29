@@ -1,0 +1,27 @@
+.recommendation-page {
+  background-color: #98E28D; // your green
+  min-height: 100vh;
+}
+
+.recommendation-card {
+  background: rgba(255, 255, 255, 0.3); // semi-transparent white
+  backdrop-filter: blur(15px);         // frosted blur effect
+  -webkit-backdrop-filter: blur(15px); // Safari support
+  border-radius: 1.5rem;
+  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.restaurant-name {
+  font-size: 2rem;
+  color: #263740;
+  font-weight: bold;
+}
+
+.reasoning {
+  font-size: 1.1rem;
+  color: #555;
+}

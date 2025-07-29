@@ -1,29 +1,26 @@
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-8 col-lg-6 text-center">
+<div class="recommendation-page py-5 d-flex justify-content-center align-items-center">
+  <div class="recommendation-card p-5 text-center shadow-lg">
 
-      <h2 class="mb-3">We recommend:
-        <%= @question.restaurant&.name || "No match found" %>
-      </h2>
+    <h1 class="mb-4 fw-bold"> Your Match Is In!</h1>
 
-      <p class="mb-4">
-        <strong>Why:</strong> <%= @question.ai_reasoning %>
-      </p>
+    <h2 class="restaurant-name mb-4"><%= @question.restaurant&.name || "No match found" %></h2>
 
-      <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
+    <p class="reasoning mb-5">
+      <strong>Why:</strong> <%= @question.cleaned_ai_reasoning %>
+    </p>
 
+    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
       <div>
         <%= button_to "Save to My Profile", save_booking_question_path(@question),
               method: :post,
               class: "btn-find" %>
       </div>
-
       <div>
         <%= link_to "Discard", question_path(@question),
               class: "btn-discard",
               data: { turbo_method: "delete", turbo_confirm: "Are you sure?" } %>
       </div>
-
     </div>
+
   </div>
 </div>
