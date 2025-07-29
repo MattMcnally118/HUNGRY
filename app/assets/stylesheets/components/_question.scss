@@ -1,27 +1,63 @@
 .recommendation-page {
-  background-color: #98E28D; // your green
+  background-color: $card-bg;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .recommendation-card {
-  background: rgba(255, 255, 255, 0.3); // semi-transparent white
-  backdrop-filter: blur(15px);         // frosted blur effect
-  -webkit-backdrop-filter: blur(15px); // Safari support
+  background: $card-bg;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 1.5rem;
-  padding: 2rem;
+  padding: 2.5rem;
   max-width: 700px;
   width: 90%;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: $text;
+  font-family: $body-font;
 }
 
 .restaurant-name {
   font-size: 2rem;
-  color: #263740;
-  font-weight: bold;
+  font-family: $headers-font;
+  color: $bg-green;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.location{
+  font-size: 1.3rem;
+  color: $text;
+
+  strong {
+    color: $accent-yellow;
+    font-weight: 600;
+  }
 }
 
 .reasoning {
   font-size: 1.1rem;
-  color: #555;
+  color: $text-muted;
+  margin-bottom: 2rem;
+
+  strong {
+    color: $accent-green;
+    font-weight: 600;
+  }
+}
+
+.question-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+    justify-content: center;
+  }
 }

@@ -1,18 +1,20 @@
-<div class="recommendation-page py-5 d-flex justify-content-center align-items-center">
-  <div class="recommendation-card p-5 text-center shadow-lg">
-    <h1 class="mb-4 fw-bold"> Your Match Is In!</h1>
+<div class="recommendation-page">
+  <div class="recommendation-card">
 
-    <h2 class="restaurant-name mb-4"><%= @question.restaurant&.name || "No match found" %></h2>
+    <h2 class="restaurant-name"><%= @question.restaurant&.name || "No match found" %></h2>
+    <p class="location">
+      <strong>Location:</strong> <%= @question.restaurant&.location %>
+    </p>
 
-    <p class="reasoning mb-5">
+    <p class="reasoning">
       <strong>Why:</strong> <%= @question.cleaned_ai_reasoning %>
     </p>
 
-    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+    <div class="question-buttons">
       <div>
         <%= button_to "Save to My Profile", save_booking_question_path(@question),
               method: :post,
-              class: "btn-find" %>
+              class: "btn-confirm" %>
       </div>
       <div>
         <%= link_to "Discard", question_path(@question),

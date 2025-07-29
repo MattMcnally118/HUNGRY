@@ -1,13 +1,13 @@
 
 
 .btn-discard {
-  background-color: #C25B66;
-  color: #ffffff;
+  background-color: $accent-green;
+  color: #fff;
   font-size: 1.2rem;
   padding: 1rem 2rem;
   margin: 0.5rem 0;
   border: none;
-  border-radius: 999px;
+  border-radius: 0.75rem;
   cursor: pointer;
   width: 100%;
   max-width: 300px;
@@ -16,37 +16,70 @@
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  font-family: 'Playfair Display';
 }
 
 .btn-discard:hover {
-  background-color: darken(#C25B66, 10%);
+  background-color: darken($accent-green, 10%);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.btn-find {
-  background-color: #B4CEE4;
-  color: #263740;
+
+
+.btn-confirm {
+  background-color: $bg-green;
+  color: #fff;
   font-size: 1.2rem;
   padding: 1rem 2rem;
   margin: 0.5rem 0;
   border: none;
-  border-radius: 999px;
+  border-radius: 0.75rem;
   cursor: pointer;
   width: 100%;
   max-width: 300px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
   text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Playfair Display';
 }
 
-.btn-find:hover {
-  background-color: #a1bedb;
+.btn-confirm:hover {
+  background-color: darken($bg-green, 8%);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.2s ease;
 }
 
+
+
+
+.btn-form {
+  background-color: $bg-green;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Playfair Display';
+}
+
+.btn-form:hover {
+  background-color: darken($bg-green, 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  color: white;
+}
 
 .btn-surprise {
   background-color: #F8BD4F;
@@ -79,30 +112,4 @@
   75% {
     transform: rotate(-2deg);
   }
-}
-
-.btn-form {
-  background-color: $bg-green;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 1rem 2rem;
-  margin: 0.5rem 0;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  width: 100%;
-  max-width: 300px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.25s ease, transform 0.2s ease;
-  text-decoration: none;
-  text-align: center;
-  font-family: 'Playfair Display';
-}
-
-.btn-form:hover {
-  background-color: darken($bg-green, 10%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  color: white;
 }
