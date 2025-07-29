@@ -8,8 +8,21 @@
 @import "font-awesome";
 
 // Your CSS partials
+ // This should come before any file that uses the mixin
 @import "components/index";
+@import "components/cards";
 @import "pages/index";
 @import url("https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css");
 
 
+/* add to your stylesheet */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #eee6d7;
+}
