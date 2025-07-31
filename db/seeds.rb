@@ -34,7 +34,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Family-Friendly, Bright, Informal",
   dietary_restrictions: ["Pescatarian", "Vegetarian"],
-  restaurant_image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -58,7 +58,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Bustling, No-Frills, Iconic",
   dietary_restrictions: ["Pescatarian", "Vegetarian"],
-  restaurant_image: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1719530306004-b4f25db0bc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -82,7 +82,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Casual, Middle Eastern, Aromatic",
   dietary_restrictions: ["Vegetarian", "Halal"],
-  restaurant_image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1653983194833-7a10838b12f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -94,7 +94,7 @@ Restaurant.create!(
   number_of_people: 6,
   mood: "Rustic, Beach, Social",
   dietary_restrictions: ["Pescatarian"],
-  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -130,7 +130,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Glamorous, Exclusive, Sophisticated",
   dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1719530306004-b4f25db0bc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 # First batch #10
@@ -192,7 +192,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Rustic, Refined, Natural",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1556442281-cf9400524105?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -204,7 +204,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Organic, Peaceful, Stylish",
   dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1600917003173-db0ba2989a08?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -216,7 +216,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Luxurious, Scenic, Sophisticated",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596142332133-327e2a0ff006?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -228,7 +228,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Serene, Wine-Centric, Refined",
   dietary_restrictions: ["Vegetarian"],
-  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596641069082-b1d5ac2b6fc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -240,7 +240,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Historic, Tranquil, Family-Friendly",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596142332133-327e2a0ff006?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -252,8 +252,10 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Country-Chic, Rustic, Informative",
   dietary_restrictions: ["Vegetarian"],
-  restaurant_image: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596641069082-b1d5ac2b6fc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
+# Second batch #20
 
 Restaurant.create!(
   name: "HQ Restaurant",
@@ -288,7 +290,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Bright, Healthy, Thoughtful",
   dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1679087860517-5dc07e5a8050?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -336,7 +338,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Lively, Urban, Diverse",
   dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1567521464027-f32278ba6020?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1604200657090-ae45994b2451?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -375,6 +377,8 @@ Restaurant.create!(
   restaurant_image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
+# Third batch #30
+
 Restaurant.create!(
   name: "Upper Union",
   location: "3 Upper Union St, Gardens, Cape Town, 8001",
@@ -396,7 +400,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Hip, Playful, Eclectic",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -408,7 +412,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Sleek, Sophisticated, Intimate",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1674601031608-1a38ca161523?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -444,7 +448,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Cultural, Vibrant, Festive",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1547637589-f54c34f5d7a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1695297516794-8bc77890e35c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=800"
 )
 
 Restaurant.create!(
@@ -456,7 +460,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Theatrical, Welcoming, Cultural",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1669261881284-61bc3d7a8c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -468,7 +472,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Festive, Rustic, Upbeat",
   dietary_restrictions: ["Vegetarian"],
-  restaurant_image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1695297516794-8bc77890e35c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -480,10 +484,9 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Outdoor, Cultural, Relaxed",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1669261881284-61bc3d7a8c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
-# Continuing restaurants from The African Cafe onwards...
 
 Restaurant.create!(
   name: "The African Cafe",
@@ -494,8 +497,10 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Cultural, Bright, Family-Style",
   dietary_restrictions: ["Vegetarian"],
-  restaurant_image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1669261881284-61bc3d7a8c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
+# Fourth batch #40
 
 Restaurant.create!(
   name: "Ganesh",
@@ -518,7 +523,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Casual, Cozy, Unpretentious",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1674106347866-8282d8c19f84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -542,7 +547,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Nautical, Relaxed, Traditional",
   dietary_restrictions: ["Pescatarian", "Vegetarian"],
-  restaurant_image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1674106347866-8282d8c19f84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -554,7 +559,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Mediterranean, Informal, Lively",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1674106347866-8282d8c19f84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -590,7 +595,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Scenic, Refined, Serene",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596142332133-327e2a0ff006?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -605,8 +610,6 @@ Restaurant.create!(
   restaurant_image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
-# Batch 3: Next 11 restaurants (continuing from previous batches)
-
 Restaurant.create!(
   name: "Eighty-Ate",
   location: "88 Queen Victoria Street, Gardens (Cape Town CBD), 8001",
@@ -619,6 +622,8 @@ Restaurant.create!(
   restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
+# Fifth batch #50
+
 Restaurant.create!(
   name: "The Nelsons Eye",
   location: "31 Roodehek Street, Gardens, Cape Town, 8001",
@@ -628,7 +633,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Traditional, Hearty, Intimate",
   dietary_restrictions: ["Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1723478557023-1f739ec06671?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -640,7 +645,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Relaxed, Botanical, Artistic",
   dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1663932464937-e677ddfc1d55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -688,7 +693,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Classic, Waterfront, European",
   dietary_restrictions: ["Pescatarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -736,10 +741,10 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Trendy, Moody, Bold",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1674601031608-1a38ca161523?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
-# Batch 4: Next 20 restaurants (continuing from previous batches)
+# Sixth batch #60
 
 Restaurant.create!(
   name: "Blues Restaurant",
@@ -786,7 +791,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Trendy, Playful, Inclusive",
   dietary_restrictions: ["Vegan", "Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "hhttps://images.unsplash.com/photo-1653983194833-7a10838b12f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -861,6 +866,8 @@ Restaurant.create!(
   restaurant_image: "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
+# Seventh batch #70
+
 Restaurant.create!(
   name: "Cattle Baron",
   location: "Shop 6, Victoria Wharf Shopping Centre, V&A Waterfront, Cape Town, 8001",
@@ -894,7 +901,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Scenic, Refined, Wine-Focused",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596142332133-327e2a0ff006?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -942,7 +949,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Sophisticated, Innovative, World-Class",
   dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1726880637228-52cb20f7bc7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -954,7 +961,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Intimate, Wine-Focused, Cozy",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1556442281-cf9400524105?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -978,10 +985,10 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Luxurious, Authentic, Scenic",
   dietary_restrictions: ["Vegetarian", "Pescatarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1606909508854-57c2b76be6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1726880637228-52cb20f7bc7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
-# Batch 5: Final 20 restaurants (completing 100 total)
+# Eighth batch #80
 
 Restaurant.create!(
   name: "Hussar Grill",
@@ -1016,7 +1023,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "World-Class, Scenic, Romantic",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596142332133-327e2a0ff006?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1052,7 +1059,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Fresh, Market-Style, Ocean Views",
   dietary_restrictions: ["Vegetarian", "Vegan", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1567521464027-f32278ba6020?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1604200657090-ae45994b2451?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1064,7 +1071,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Rural, Farm-to-Table, Peaceful",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596641069082-b1d5ac2b6fc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1076,7 +1083,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Authentic Greek, Lively, Traditional",
   dietary_restrictions: ["Vegetarian", "Pescatarian"],
-  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1674106347866-8282d8c19f84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1100,8 +1107,10 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Historic, Wine-Focused, Sophisticated",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596142332133-327e2a0ff006?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
+
+# Ninth batch #90
 
 Restaurant.create!(
   name: "Salon",
@@ -1112,7 +1121,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Stylish, Cocktail-Focused, Contemporary",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1605270012917-bf157c5a9541?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1124,7 +1133,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Historic, Innovative, Fine Dining",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1136,7 +1145,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Premium, Meat-Focused, Robust",
   dietary_restrictions: ["Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1723478557023-1f739ec06671?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1148,7 +1157,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Rustic-Chic, Farm Village, Seasonal",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://plus.unsplash.com/premium_photo-1664299231810-29d1caf6f753?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1184,7 +1193,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Intimate, Moody, Wine-Focused",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1543352634-a1c851d9235e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1556442281-cf9400524105?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1196,7 +1205,7 @@ Restaurant.create!(
   number_of_people: 2,
   mood: "Wine Estate, Contemporary, Vineyard Views",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596142332133-327e2a0ff006?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(
@@ -1208,7 +1217,7 @@ Restaurant.create!(
   number_of_people: 4,
   mood: "Farm-to-Table, Historic, Valley Views",
   dietary_restrictions: ["Vegetarian", "Gluten-Free Options"],
-  restaurant_image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+  restaurant_image: "https://images.unsplash.com/photo-1596142332133-327e2a0ff006?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 )
 
 Restaurant.create!(

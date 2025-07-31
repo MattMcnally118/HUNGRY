@@ -7,6 +7,9 @@
       data-map-markers-value="<%= @markers.to_json %>">
     </div>
 
+      <div class="profile-heading">
+      <h2>My Restaurants</h2>
+      </div>
 
         <div class="questions-container">
           <% @questions.each do |question| %>
@@ -16,36 +19,50 @@
             <div class="question-card-heading">
               <h5 class="question-card-title"><%= restaurant.name %></h5>
             </div>
-          <% if user_review&.photos.present? %>
+
+            <div class="question-card-body">
+            <% if user_review&.photos.present? %>
               <div class="review-gallery">
                 <% user_review.photos.each_with_index do |photo, index| %>
                   <%= cl_image_tag photo.key,
                         class: "gallery-image gallery-image-#{index % 6}",
                         alt: "#{restaurant.name} review photo ##{index + 1}" %>
                 <% end %>
-          <% else %>
-            <div class="review-gallery-empty">
-              <div class="no-image-placeholder">
-                <span>📸 No photos yet</span>
-              </div>
-            </div>
-          <% end %>
-            <% if user_review %>
-              <div class="rating-overlay">
-                <% user_review.rating.to_i.times do %>
-                  <span class="star">⭐</span>
+
+                <% if user_review %>
+                  <div class="rating-overlay">
+                    <% user_review.rating.to_i.times do %>
+                      <i class="fa-solid fa-star star-icon"></i>
+                    <% end %>
+                  </div>
                 <% end %>
               </div>
             <% else %>
-              <div class="rating-overlay rating-pending">
-                <span>Rating pending</span>
+              <div class="review-gallery-empty">
+                <div class="no-image-placeholder">
+                  <span>📸 No photos yet</span>
+                </div>
+
+                <% if user_review %>
+                  <div class="rating-overlay">
+                    <% user_review.rating.to_i.times do %>
+                      <i class="fa-solid fa-star star-icon"></i>
+                    <% end %>
+                  </div>
+                <% else %>
+                  <div class="rating-overlay rating-pending">
+                    <span>Rating pending</span>
+                  </div>
+                <% end %>
               </div>
             <% end %>
-              </div>
+          </div>
+
               <div class="question-card-button">
                 <%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant), class: "btn-confirm" %>
               </div>
-          </div>
+              </div>
           <% end %>
+          </div>
         </div>
 </div>

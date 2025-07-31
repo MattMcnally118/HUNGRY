@@ -2,6 +2,7 @@
 .form-container {
   background-color: $card-bg;
   padding: 30px;
+  height:100%;
 }
 
 input[type="text"],
@@ -37,6 +38,7 @@ textarea {
   display: flex;
   flex-direction: column;
   margin-bottom:40px;
+  padding: 1rem;
 }
 
 .form-card-header {

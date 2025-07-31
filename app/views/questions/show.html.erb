@@ -5,19 +5,42 @@
     <p class="location">
       <strong>Location:</strong> <%= @question.restaurant&.location %>
     </p>
+      <div class="user-answers">
+        <% if @question.preference_data["price_range"].present? %>
+          <p class="pill"><%= @question.preference_data["price_range"] %></p>
+        <% end %>
 
+        <% if @question.preference_data["cuisine_type"].present? %>
+          <p class="pill"><%= @question.preference_data["cuisine_type"] %></p>
+        <% end %>
+
+        <% if @question.preference_data["current_mood"].present? %>
+          <p class="pill"><%= @question.preference_data["current_mood"] %></p>
+        <% end %>
+
+        <% if @question.preference_data["number_of_people"].present? %>
+          <p class="pill">
+            <i class="fa-solid fa-user-group"></i>  
+            <%= @question.preference_data["number_of_people"] %>
+          </p>
+        <% end %>
+
+        <% if @question.preference_data["dietary_restrictions"].present? %>
+          <p class="pill"><%= @question.preference_data["dietary_restrictions"] %></p>
+        <% end %>
+      </div>
     <p class="reasoning">
       <strong>Why:</strong> <%= @question.cleaned_ai_reasoning %>
     </p>
 
     <div class="question-buttons">
       <div>
-        <%= button_to "Save to My Profile", save_booking_question_path(@question),
+        <%= button_to "Adventure Time", save_booking_question_path(@question),
               method: :post,
               class: "btn-confirm" %>
       </div>
       <div>
-        <%= link_to "Discard", question_path(@question),
+        <%= link_to "I'm not interested", question_path(@question),
               class: "btn-discard",
               data: { turbo_method: "delete", turbo_confirm: "Are you sure?" } %>
       </div>
