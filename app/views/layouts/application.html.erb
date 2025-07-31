@@ -13,6 +13,8 @@
 
   </head>
 
+  <body class="container-fluid">
+
   <body class="d-flex flex-column min-vh-100">
     <% unless current_page?(root_path) %>
       <div class="back-button-container">
@@ -23,9 +25,7 @@
     <% end %>
 
 
-    <main class="flex-grow-1">
       <%= yield %>
-    </main>
 
     <%= render "shared/footer" %>
   </body>
