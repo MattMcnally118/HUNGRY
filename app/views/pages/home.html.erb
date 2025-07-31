@@ -1,10 +1,75 @@
 
-<div class="container-home container-lg">
-  <div class="image-wrapper">
-    <%= image_tag 'https://placehold.co/350x200', alt: 'Placeholder image', loading: 'lazy' %>
+
+<!-- Hero Section -->
+<div class="homepage-container" data-controller="homepage">
+  <div class="floating-circle circle-1"></div>
+  <div class="floating-circle circle-2"></div>
+  <div class="floating-circle circle-3"></div>
+  <div class="floating-circle circle-4"></div>
+
+  <h1>Hungry?</h1>
+  <p class="homepage-subheading">Let's find your next favourite spot in Cape Town.</p>
+
+  <%= link_to "Find a Restaurant", new_question_path, class: "btn-surprise" %>
+
+  <div class="scroll-indicator" data-action="click->homepage#scrollToAbout">
+    <i class="fas fa-chevron-down" style="font-size: 1.5rem;"></i>
   </div>
-  <div class="homepage-container">
-    <p class="homepage-subheading">Let’s find your next favourite spot.</p>
-    <%= link_to "Find a Restaurant", new_question_path, class: "btn-confirm rounded-pill" %>
+</div>
+
+<!-- About Section -->
+<div class="about-section" id="about">
+  <div class="about-container">
+    <div class="about-header">
+      <h2>Discover Cape Town's Best</h2>
+      <p>We're passionate foodies on a mission to help you discover amazing restaurants, hidden gems, and unforgettable dining experiences across the Mother City.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <h3>Curated Restaurants</h3>
+        <p>Hand-picked dining spots from trendy bistros to hidden local gems, all verified by our community of food lovers.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <h3>Honest Reviews</h3>
+        <p>Real reviews from real people. No fake ratings, just authentic experiences shared by fellow Cape Town food enthusiasts.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Local Expertise</h3>
+        <p>Born and bred in Cape Town, we know the city's food scene inside out. From Camps Bay to Observatory, we've got you covered.</p>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number" data-target="500">0</span>
+          <span class="stat-label">Restaurants</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="2500">0</span>
+          <span class="stat-label">Reviews</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="1200">0</span>
+          <span class="stat-label">Food Lovers</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="50">0</span>
+          <span class="stat-label">Neighborhoods</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
