@@ -1,4 +1,3 @@
-
 /* Hero Section */
 .homepage-container {
   position: relative;
@@ -36,38 +35,31 @@
   top: 10%;
   left: 10%;
   animation-delay: 0s;
-
-
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
-.homepage-container {
-  background: url('https://media.istockphoto.com/id/1198380802/vector/food-background-vegetables-seamless-pattern-healthy-eating-tomato-garlic-carrot-pepper.jpg?s=612x612&w=0&k=20&c=jHB3uTWZrakPyAgqSQfOApxSq_jIwHRx00LiOV2YHEk=');
-  height: 50%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
+.circle-2 {
+  width: 80px;
+  height: 80px;
+  bottom: 15%;
+  right: 15%;
+  animation-delay: 2s;
 }
 
-.homepage-subheading {
-  font-size: 1rem;
-  color: #263740;
-  opacity: 0.8;
-  margin-bottom: 1.5rem;
-  font-family: 'Fredoka', sans-serif;
+.circle-3 {
+  width: 60px;
+  height: 60px;
+  top: 20%;
+  right: 25%;
+  animation-delay: 1.5s;
 }
 
+.circle-4 {
+  width: 90px;
+  height: 90px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 3s;
+}
 
 @keyframes float {
   0%, 100% {
@@ -83,11 +75,11 @@
     transform: scale(0.8);
     opacity: 0;
   }
-
-  .homepage-container {
-    padding: 1rem;
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-
+}
 
 .homepage-container h1 {
   font-size: 4rem;
@@ -137,7 +129,7 @@
 
 /* About Section */
 .about-section {
-  background:$card-bg;
+  background: $card-bg;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
