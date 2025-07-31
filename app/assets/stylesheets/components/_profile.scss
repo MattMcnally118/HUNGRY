@@ -1,23 +1,23 @@
 .profile-container {
-  background-color: $card-bg;
+  width: 100vw;
   min-height: 100vh;
-  padding: 1.5rem 1rem;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  background-color: $card-bg;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 100px;
 
   @media (min-width: 768px) {
-    padding: 2rem 2.5rem;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 3rem 5rem;
+    padding: 2rem;
   }
 }
 
 .mapbox {
   width: 100%;
   height: 280px;
+  border: 2px solid $bg-green;
   border-radius: 1rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
@@ -36,25 +36,52 @@
   }
 }
 
+.profile-heading{
+  color: $bg-green
+}
+
 .questions-container {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  flex-direction: row;
+  width: 100%;
+  height: 100%; // takes full space of profile container
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  border-radius: 1rem;
 
-  @media (min-width: 768px) {
-    gap: 2rem;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
+
 .question-card {
-  background-color: transparent;
-  position: relative;
+  flex: 0 0 95vw; // fixed width for scrollable snap
+  height: 90vh;;
+  scroll-snap-align: start;
   border-radius: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  font-family: $body-font;
-  color: $text;
+  justify-content: space-between;
+  position: relative;
+  background-color: $card-bg;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+.question-card-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
 
 .question-card-heading {
   position: absolute;
@@ -79,72 +106,56 @@
   bottom: 0.5rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+  background-color: $card-bg;
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
   font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .rating-pending {
-  background-color: rgba(220, 220, 220, 0.85);
+  background-color: $card-bg;
   font-style: italic;
   color: $text-muted;
 }
 
 
 .review-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 0.5rem;
-  padding: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  background-color: $pills-green;
-  border-radius: 0 0 1rem 1rem;
+  column-count: 2;
+  column-gap: 1rem;
+  break-inside: avoid;
+  margin-bottom: 1rem;
 
   .gallery-image {
     width: 100%;
-    height: auto;
+    margin-bottom: 1rem;
     border-radius: 0.5rem;
     object-fit: cover;
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+    display: block;
+    break-inside: avoid;
   }
 
-  // Optional: varied sizing for some images
-  .gallery-image-0 {
-    grid-column: span 2;
-  }
-
-  .gallery-image-3 {
-    grid-row: span 2;
-  }
-
-  .gallery-image-5 {
-    grid-column: span 2;
-    grid-row: span 2;
+  @media (min-width: 768px) {
+    column-count: 3;
   }
 }
 
 .review-gallery-empty {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $pills-green;
-  padding: 2rem;
   border-radius: 0 0 1rem 1rem;
   text-align: center;
   color: $text-muted;
   font-size: 1rem;
   font-style: italic;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem;
 
   .no-image-placeholder {
     border: 2px dashed lighten($bg-green, 30%);
@@ -153,6 +164,7 @@
     width: 100%;
   }
 }
+
 
 .review-gallery,
 .review-gallery-empty {
@@ -163,5 +175,14 @@
 .question-card-button {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+}
+
+
+.star-icon {
+  color: $accent-yellow;
+  font-size: 1.25rem;
+
+  &:not(:last-child) {
+    margin-right: 0.2rem;
+  }
 }
