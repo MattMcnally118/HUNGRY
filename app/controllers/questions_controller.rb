@@ -33,9 +33,8 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-
+    redirect_to root_path
   end
-
 
   def save_booking
     Booking.create!(
