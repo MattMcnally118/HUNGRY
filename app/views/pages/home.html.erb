@@ -1,17 +1,9 @@
-
-<div class="homepage-container">
-
-
-  <div class="floating-circle circle-1"></div>
-  <div class="floating-circle circle-2"></div>
-  <div class="floating-circle circle-3"></div>
-  <div class="floating-circle circle-4"></div>
-
-  <h1>Hungry?</h1>
-  <p class="homepage-subheading">Let’s find your next favourite spot.</p>
-
-  <%= link_to "Find a Restaurant", new_question_path, class: "btn-find" %>
-
-  <button class="btn-surprise">
-    Surprise Me
-  </button>
+<div class="container-home container-lg">
+  <div class="image-wrapper">
+    <%= image_tag 'https://placehold.co/350x200', alt: 'Placeholder image', loading: 'lazy' %>
+  </div>
+  <div class="homepage-container">
+    <p class="homepage-subheading">Let’s find your next favourite spot.</p>
+    <%= link_to "Find a Restaurant", new_question_path, class: "btn-confirm rounded-pill" %>
+  </div>
+</div>

@@ -156,3 +156,8 @@ textarea::placeholder {
     background-color: lighten($accent-green, 20%);
   }
 }
+
+select.form-select {
+  cursor: pointer;
+  background-color: $accent-green;
+}

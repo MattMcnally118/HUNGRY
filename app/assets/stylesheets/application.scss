@@ -17,12 +17,16 @@
 
 /* add to your stylesheet */
 html, body {
-  height: 100%;
   margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  background: #eee6d7;
+  display: inline-grid;             /* shrink-wrap to content width */
+  grid-template-rows: auto 1fr auto; /* header, content, footer structure */
+  align-content: center;             /* stack rows at the top */
+  justify-items: center;            /* center items horizontally */
+  background: rgb(246, 243, 238);
 }
