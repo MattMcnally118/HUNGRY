@@ -1,8 +1,12 @@
-<div class="form-container">
+<div class="form-container" data-controller="review-loader">
   <div class="form-card text-center p-4">
     <h2>Rate <%= @restaurant.name %></h2>
 
-    <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= simple_form_for [@restaurant, @review], data: {
+              turbo: true,
+              action: "turbo:submit-start->review-loader#show"
+            } do |f| %>
+            
       <div class="align-items-center text-center">
         <%= f.input :rating,
             collection: (1..5).to_a,
@@ -27,4 +31,11 @@
       </div>
     <% end %>
   </div>
+    <div id="review-loading-overlay" class="loading-overlay" data-review-loader-target="overlay">
+      <div class="loading-content text-center">
+        <h2 class="loading-heading">Saving your review...</h2>
+        <div class="spinner"></div>
+        <p class="loading-text">Loading...</p>
+      </div>
+    </div>
 </div>
