@@ -24,7 +24,7 @@
             <% if user_review&.photos.present? %>
               <div class="review-gallery">
                 <% user_review.photos.each_with_index do |photo, index| %>
-                  <%= cl_image_tag photo,
+                  <%= cl_image_tag photo.blob.key,
                         class: "gallery-image gallery-image-#{index % 6}",
                         alt: "#{restaurant.name} review photo ##{index + 1}" %>
                 <% end %>
