@@ -1,12 +1,11 @@
 .footer {
-  font-family: 'Fredoka', sans-serif;
   background:$bg-green;
   position: fixed;
   bottom: 0;
   width:100%;
 
   a {
-    color: $card-bg;
+    color: $accent-yellow;
     text-decoration: none;
 
     &:hover {

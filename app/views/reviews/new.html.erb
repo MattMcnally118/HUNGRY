@@ -1,28 +1,41 @@
-<div class="form-container">
-  <div class="form-card">
-    <h2 class="text-center mb-4">Rate <%= @restaurant.name %></h2>
+<div class="form-container" data-controller="review-loader">
+  <div class="form-card text-center p-4">
+    <h2>Rate <%= @restaurant.name %></h2>
 
-    <%= simple_form_for [@restaurant, @review] do |f| %>
-      <div class="mb-3">
+    <%= simple_form_for [@restaurant, @review], data: {
+              turbo: true,
+              action: "turbo:submit-start->review-loader#show"
+            } do |f| %>
+            
+      <div class="align-items-center text-center">
         <%= f.input :rating,
-                    collection: (1..5).to_a,
-                    label: "Rate your experience",
-                    input_html: {
-                      class: "form-select rounded-pill",
-                      data: { controller: "star-rating" }
-                    } %>
+            collection: (1..5).to_a,
+            label: "Rate your experience",
+            include_blank: false,
+            input_html: {
+              class: "form-select input-sm",
+              data: { controller: "star-rating" }
+            } %>
+
       </div>
 
       <div class="mb-3">
         <%= f.input :photos,
                     as: :file,
                     label: "Upload photos",
-                    input_html: { multiple: true, class: "form-control rounded-pill" } %>
+                    input_html: { multiple: true, class: "form-control input-sm rounded-pill"} %>
       </div>
 
       <div class="text-center">
-        <%= f.button :submit, "Submit Review", class: "btn btn-ghost rounded-pill px-5" %>
+        <%= f.button :submit, "Submit Review", class: "btn btn-confirm  rounded-pill px-5" %>
       </div>
     <% end %>
   </div>
+    <div id="review-loading-overlay" class="loading-overlay" data-review-loader-target="overlay">
+      <div class="loading-content text-center">
+        <h2 class="loading-heading">Saving your review...</h2>
+        <div class="spinner"></div>
+        <p class="loading-text">Loading...</p>
+      </div>
+    </div>
 </div>
