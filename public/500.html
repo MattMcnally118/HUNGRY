@@ -211,7 +211,6 @@
             border-color: rgba(255, 255, 255, 0.5);
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -227,7 +226,6 @@
             }
         }
 
-        /* Additional floating elements */
         .particle {
             position: absolute;
             background: rgba(255, 255, 255, 0.3);
@@ -414,8 +412,6 @@
 
         function checkStatus() {
             console.log('Checking server status');
-            // Add your status page navigation logic here
-            // window.location.href = '/status';
         }
 
         document.querySelectorAll('.btn').forEach(btn => {
@@ -428,7 +424,6 @@
             });
         });
 
-        // Random flicker effect trigger for 500
         setInterval(() => {
             const flickerElement = document.querySelector('.flicker');
             flickerElement.style.animation = 'none';
@@ -437,7 +432,6 @@
             }, 50);
         }, 5000 + Math.random() * 3000);
 
-        // Enhanced server icon error animation
         const serverIcon = document.querySelector('.server-icon');
         setInterval(() => {
             serverIcon.style.filter = 'brightness(0.5)';
@@ -445,13 +439,6 @@
                 serverIcon.style.filter = 'brightness(1)';
             }, 150);
         }, 4000);
-
-        // Auto-refresh functionality (optional - uncomment if desired)
-        // setTimeout(() => {
-        //     if (confirm('Would you like to try refreshing the page automatically?')) {
-        //         location.reload();
-        //     }
-        // }, 30000); // Ask after 30 seconds
     </script>
 </body>
 </html>

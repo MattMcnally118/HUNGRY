@@ -22,7 +22,6 @@
             position: relative;
         }
 
-        /* Animated background elements */
         .bg-elements {
             position: absolute;
             top: 0;
@@ -74,7 +73,6 @@
             50% { transform: translateY(-20px) rotate(10deg); }
         }
 
-        /* Main container */
         .container {
             text-align: center;
             z-index: 10;
@@ -83,7 +81,6 @@
             padding: 2rem;
         }
 
-        /* 422 Number Animation */
         .error-code {
             font-size: clamp(8rem, 15vw, 12rem);
             font-weight: 900;
@@ -118,7 +115,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Shake effect for the 422 */
         .shake {
             position: relative;
             animation: shake 0.5s ease-in-out infinite alternate;
@@ -132,7 +128,6 @@
             100% { transform: translateX(0) rotate(0deg); }
         }
 
-        /* Content styling */
         .error-title {
             font-size: clamp(1.5rem, 4vw, 2.5rem);
             color: white;
@@ -162,7 +157,6 @@
             }
         }
 
-        /* Button styling */
         .btn-container {
             display: flex;
             gap: 1rem;
@@ -213,7 +207,6 @@
             border-color: rgba(255, 255, 255, 0.5);
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -229,7 +222,6 @@
             }
         }
 
-        /* Additional floating elements */
         .particle {
             position: absolute;
             background: rgba(255, 255, 255, 0.3);
@@ -249,7 +241,6 @@
             }
         }
 
-        /* Mouse trail effect */
         .cursor-trail {
             position: absolute;
             width: 20px;
@@ -261,7 +252,6 @@
             transition: all 0.1s ease;
         }
 
-        /* Warning icon animation */
         .warning-icon {
             font-size: 3rem;
             color: rgba(255, 255, 255, 0.9);
@@ -285,14 +275,12 @@
     </style>
 </head>
 <body>
-    <!-- Background animated elements -->
     <div class="bg-elements">
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
         <div class="floating-shape shape-3"></div>
     </div>
 
-    <!-- Main content -->
     <div class="container">
         <div class="warning-icon">⚠️</div>
         <div class="error-code shake">422</div>
@@ -308,7 +296,6 @@
     </div>
 
     <script>
-        // Add floating particles
         function createParticle() {
             const particle = document.createElement('div');
             particle.className = 'particle';
@@ -322,10 +309,8 @@
             }, 5000);
         }
 
-        // Create particles periodically
         setInterval(createParticle, 300);
 
-        // Mouse trail effect
         let mouseTrails = [];
         document.addEventListener('mousemove', (e) => {
             if (mouseTrails.length > 10) {
@@ -353,7 +338,6 @@
             }, 100);
         });
 
-        // Button click handlers
         function goBack() {
             console.log('Going back to try again');
             window.history.back();
@@ -361,11 +345,8 @@
 
         function getHelp() {
             console.log('Navigating to support page');
-            // Add your support page navigation logic here
-            // window.location.href = '/support';
         }
 
-        // Add some interactive hover effects
         document.querySelectorAll('.btn').forEach(btn => {
             btn.addEventListener('mouseenter', () => {
                 btn.style.transform = 'translateY(-3px) scale(1.05)';
@@ -376,7 +357,6 @@
             });
         });
 
-        // Random shake effect trigger for 422
         setInterval(() => {
             const shakeElement = document.querySelector('.shake');
             shakeElement.style.animation = 'none';
@@ -385,7 +365,6 @@
             }, 50);
         }, 4000 + Math.random() * 2000);
 
-        // Add subtle warning icon bounce
         const warningIcon = document.querySelector('.warning-icon');
         setInterval(() => {
             warningIcon.style.transform = 'scale(1.2)';
