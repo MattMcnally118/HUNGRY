@@ -1,66 +1,457 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Server Error</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 25%, #e74c3c 75%, #c0392b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+        .bg-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
+        .floating-shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape-1 {
+            top: 20%;
+            left: 10%;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            animation-delay: 0s;
+        }
+
+        .shape-2 {
+            top: 60%;
+            right: 15%;
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 20px;
+            animation-delay: 2s;
+        }
+
+        .shape-3 {
+            bottom: 20%;
+            left: 20%;
+            width: 60px;
+            height: 60px;
+            background: white;
+            transform: rotate(45deg);
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+            max-width: 600px;
+            padding: 2rem;
+        }
+
+
+        .error-code {
+            font-size: clamp(8rem, 15vw, 12rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .error-code::before {
+            content: '500';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg, #e74c3c, #c0392b, #8e44ad, #9b59b6);
+            background-size: 400% 400%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+
+        .flicker {
+            position: relative;
+            animation: flicker 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 90% { opacity: 1; }
+            95% { opacity: 0.5; }
+            97% { opacity: 1; }
+            98% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+
+        .error-message {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.5s forwards;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #c0392b, #a93226);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 200px;
+            }
+        }
+
+        /* Additional floating elements */
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particleFloat 4s linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+
+        .cursor-trail {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 5;
+            transition: all 0.1s ease;
+        }
+
+
+        .server-icon {
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+            animation: serverError 3s ease-in-out infinite;
+            opacity: 0;
+            animation-delay: 0.3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes serverError {
+            0%, 100% {
+                opacity: 0.9;
+                transform: scale(1) rotate(0deg);
+            }
+            25% {
+                opacity: 0.5;
+                transform: scale(0.95) rotate(-2deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05) rotate(2deg);
+            }
+            75% {
+                opacity: 0.7;
+                transform: scale(0.98) rotate(-1deg);
+            }
+        }
+
+        .loading-dots {
+            display: inline-block;
+            position: relative;
+            margin-left: 0.5rem;
+        }
+
+        .loading-dots::after {
+            content: '';
+            animation: loadingDots 1.4s ease-in-out infinite;
+        }
+
+        @keyframes loadingDots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+
+
+        .status-indicator {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 0.5rem 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.2s forwards;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #e74c3c;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            animation: statusBlink 2s ease-in-out infinite;
+        }
+
+        @keyframes statusBlink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+    </style>
 </head>
+<body>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
+    <div class="bg-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
+
+
+    <div class="container">
+        <div class="server-icon">🔧</div>
+        <div class="error-code flicker">500</div>
+        <h1 class="error-title">Server Error</h1>
+        <div class="status-indicator">
+            <span class="status-dot"></span>
+            We're working on it<span class="loading-dots"></span>
+        </div>
+        <p class="error-message">
+            Something went wrong on our end. Our team has been notified and is working to fix the issue.
+            Please try refreshing the page or check back in a few minutes.
+        </p>
+        <div class="btn-container">
+            <a href="javascript:location.reload()" class="btn btn-primary" onclick="refreshPage()">Refresh Page</a>
+            <a href="/status" class="btn btn-secondary" onclick="checkStatus()">Check Status</a>
+        </div>
+    </div>
+
+    <script>
+
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.width = particle.style.height = Math.random() * 10 + 5 + 'px';
+            particle.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 5000);
+        }
+
+        setInterval(createParticle, 300);
+
+        let mouseTrails = [];
+        document.addEventListener('mousemove', (e) => {
+            if (mouseTrails.length > 10) {
+                const oldTrail = mouseTrails.shift();
+                if (oldTrail.parentNode) {
+                    oldTrail.parentNode.removeChild(oldTrail);
+                }
+            }
+
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            trail.style.left = e.clientX - 10 + 'px';
+            trail.style.top = e.clientY - 10 + 'px';
+            document.body.appendChild(trail);
+            mouseTrails.push(trail);
+
+            setTimeout(() => {
+                trail.style.opacity = '0';
+                trail.style.transform = 'scale(2)';
+                setTimeout(() => {
+                    if (trail.parentNode) {
+                        trail.parentNode.removeChild(trail);
+                    }
+                }, 300);
+            }, 100);
+        });
+
+        function refreshPage() {
+            console.log('Refreshing page');
+            location.reload();
+        }
+
+        function checkStatus() {
+            console.log('Checking server status');
+            // Add your status page navigation logic here
+            // window.location.href = '/status';
+        }
+
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Random flicker effect trigger for 500
+        setInterval(() => {
+            const flickerElement = document.querySelector('.flicker');
+            flickerElement.style.animation = 'none';
+            setTimeout(() => {
+                flickerElement.style.animation = 'flicker 1.5s ease-in-out infinite alternate, pulse 2s ease-in-out infinite';
+            }, 50);
+        }, 5000 + Math.random() * 3000);
+
+        // Enhanced server icon error animation
+        const serverIcon = document.querySelector('.server-icon');
+        setInterval(() => {
+            serverIcon.style.filter = 'brightness(0.5)';
+            setTimeout(() => {
+                serverIcon.style.filter = 'brightness(1)';
+            }, 150);
+        }, 4000);
+
+        // Auto-refresh functionality (optional - uncomment if desired)
+        // setTimeout(() => {
+        //     if (confirm('Would you like to try refreshing the page automatically?')) {
+        //         location.reload();
+        //     }
+        // }, 30000); // Ask after 30 seconds
+    </script>
 </body>
 </html>

@@ -1,0 +1,5 @@
+meta_product_name: "Hungry?"
+meta_title: "Hungry? - Let's find your next favourite spot"
+meta_description: "Hungry? is a service that helps you find your ideal restaurant in Cape Town"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account" # required for Twitter Cards
